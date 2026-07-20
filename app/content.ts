@@ -98,7 +98,8 @@ export const content = {
     blogTitle: "Ciencia que continúa después del taller.",
     blogIntro:
       "Recursos claros para docentes y familias, escritos desde la experiencia y pensados para usar de verdad.",
-    blogCta: "Ver todos los artículos",
+    blogCta: "Leer artículo",
+    blogAllCta: "Explorar el blog",
     posts: [
       ["Ferias científicas", "Cómo elegir un experimento que tus estudiantes sí puedan terminar", "7 min"],
       ["Ciencia en casa", "Tres preguntas que transforman una actividad en una investigación", "5 min"],
@@ -214,7 +215,8 @@ export const content = {
     blogTitle: "Science that continues after the workshop.",
     blogIntro:
       "Clear resources for teachers and families, grounded in experience and designed to be genuinely useful.",
-    blogCta: "Browse all articles",
+    blogCta: "Read article",
+    blogAllCta: "Explore the blog",
     posts: [
       ["Science fairs", "How to choose an experiment your students can actually finish", "7 min"],
       ["Science at home", "Three questions that turn an activity into an investigation", "5 min"],

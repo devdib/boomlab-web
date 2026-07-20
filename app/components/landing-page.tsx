@@ -1,5 +1,7 @@
 import { contactDetails, content, type Locale } from "../content";
+import { blogPosts } from "../blog-data";
 import { HeroGallery } from "./hero-gallery";
+import { SiteFooter, SiteHeader } from "./site-chrome";
 
 function FlaskMark() {
   return (
@@ -14,10 +16,6 @@ function FlaskMark() {
   );
 }
 
-function BrandLogo() {
-  return <span className="brand-logo" aria-hidden="true" />;
-}
-
 export function LandingPage({ locale }: { locale: Locale }) {
   const t = content[locale];
   const pageIds =
@@ -25,6 +23,9 @@ export function LandingPage({ locale }: { locale: Locale }) {
       ? { audiences: "publicos", experiences: "experiencias", process: "como-funciona", about: "nosotros" }
       : { audiences: "audiences", experiences: "experiences", process: "how-it-works", about: "about" };
   const contactId = locale === "es" ? "contacto" : "contact";
+  const contactHref = locale === "es" ? "/es/contacto" : "/en/contact";
+  const blogHref = `/${locale}/blog`;
+  const featuredPosts = blogPosts[locale].slice(0, 3);
   const artNotes =
     locale === "es"
       ? ["Curiosidad", "Territorio", "Aprender haciendo"]
@@ -32,28 +33,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
 
   return (
     <main>
-      <header className="site-header">
-        <div className="shell header-inner">
-          <a className="wordmark" href={`/${locale}`} aria-label="Boom! Lab">
-            <BrandLogo />
-          </a>
-          <nav className="desktop-nav" aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"}>
-            {t.nav.map(([label, href]) => (
-              <a href={href} key={label}>
-                {label}
-              </a>
-            ))}
-          </nav>
-          <div className="header-actions">
-            <a className="language-link" href={t.alternateHref}>
-              {t.alternateLocale}
-            </a>
-            <a className="button button-small" href={`#${contactId}`}>
-              {t.contact}
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader locale={locale} />
 
       <section className="hero">
         <div className="hero-grid shell">
@@ -63,7 +43,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <h1>{t.title}</h1>
             <p className="hero-intro">{t.intro}</p>
             <div className="hero-actions">
-              <a className="button" href={`#${contactId}`}>{t.primaryCta}<span aria-hidden="true">→</span></a>
+              <a className="button" href={contactHref}>{t.primaryCta}<span aria-hidden="true">→</span></a>
               <a className="text-link" href={`#${pageIds.about}`}>{t.secondaryCta}<span aria-hidden="true">↘</span></a>
             </div>
             <div className="proof-row">
@@ -117,7 +97,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-                <a href={`#${contactId}`}>{t.audiencesCta}<span aria-hidden="true">→</span></a>
+                <a href={contactHref}>{t.audiencesCta}<span aria-hidden="true">→</span></a>
               </article>
             ))}
           </div>
@@ -181,18 +161,21 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <p>{t.blogIntro}</p>
           </div>
           <div className="post-grid">
-            {t.posts.map(([category, title, time], index) => (
-              <article className={index === 0 ? "post-card post-featured" : "post-card"} key={title}>
+            {featuredPosts.map((post, index) => (
+              <article className={index === 0 ? "post-card post-featured" : "post-card"} key={post.slug}>
                 <div className={`post-visual visual-${index + 1}`}>
-                  <span>{index === 0 ? "⚗" : index === 1 ? "?" : "✦"}</span>
+                  <span>{post.icon}</span>
                 </div>
                 <div className="post-content">
-                  <div className="post-meta"><span>{category}</span><span>{time}</span></div>
-                  <h3>{title}</h3>
-                  <span className="read-more">{t.blogCta} <b>→</b></span>
+                  <div className="post-meta"><span>{post.category}</span><span>{post.readTime}</span></div>
+                  <h3>{post.title}</h3>
+                  <a className="read-more" href={`${blogHref}/${post.slug}`}>{t.blogCta} <b>→</b></a>
                 </div>
               </article>
             ))}
+          </div>
+          <div className="blog-index-link">
+            <a className="button button-outline" href={blogHref}>{t.blogAllCta}<span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
@@ -253,13 +236,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <div className="shell footer-inner">
-          <div className="footer-brand" aria-label="Boom! Lab"><BrandLogo /></div>
-          <p>{t.footer}</p>
-          <span>© 2026 · {t.footerLocation}</span>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} />
     </main>
   );
 }
