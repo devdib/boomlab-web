@@ -13,6 +13,10 @@ function FlaskMark() {
   );
 }
 
+function BrandLogo() {
+  return <span className="brand-logo" aria-hidden="true" />;
+}
+
 export function LandingPage({ locale }: { locale: Locale }) {
   const t = content[locale];
   const sectionIds =
@@ -30,9 +34,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
       <header className="site-header">
         <div className="shell header-inner">
           <a className="wordmark" href={`/${locale}`} aria-label="Boom! Lab">
-            <FlaskMark />
-            <span>Boom!</span>
-            <strong>Lab</strong>
+            <BrandLogo />
           </a>
           <nav className="desktop-nav" aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"}>
             {t.nav.map(([label], index) => (
@@ -214,7 +216,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
 
       <footer className="site-footer">
         <div className="shell footer-inner">
-          <div className="wordmark footer-mark"><FlaskMark /><span>Boom!</span><strong>Lab</strong></div>
+          <div className="footer-brand" aria-label="Boom! Lab"><BrandLogo /></div>
           <p>{t.footer}</p>
           <span>© 2026 · Concepción, Chile</span>
         </div>
