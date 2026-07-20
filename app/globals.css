@@ -293,6 +293,9 @@ button, input, textarea { font: inherit; }
 .article-author > div { display: flex; flex-direction: column; gap: 4px; }
 .article-author strong { font-size: .9rem; }
 .article-author small { color: var(--ink-soft); font-size: .7rem; line-height: 1.35; }
+.article-reviewer { margin-top: 12px; padding-top: 12px; display: grid; gap: 3px; border-top: 1px solid var(--line); }
+.article-reviewer > span { color: #168468; font-size: .66rem; font-weight: 820; text-transform: uppercase; letter-spacing: .055em; }
+.article-reviewer > strong { font-size: .86rem; }
 .article-dates { text-align: right; }
 .article-takeaways { margin: 0 0 48px; padding: 28px; border-radius: 26px; background: var(--sky); }
 .article-takeaways h2 { margin: 0 0 17px; font-size: 1.5rem; letter-spacing: -.04em; }

@@ -48,6 +48,7 @@ export function ArticlePage({ locale, post }: { locale: Locale; post: BlogPost }
     inLanguage: locale === "es" ? "es-CL" : "en",
     mainEntityOfPage: articleUrl,
     author: { "@type": "Organization", name: post.author },
+    ...(locale === "es" && post.reviewer ? { reviewedBy: { "@type": "Person", name: post.reviewer, jobTitle: post.reviewerRole } } : {}),
     publisher: { "@type": "Organization", name: "Boom! Lab" },
     isAccessibleForFree: true,
   };
@@ -74,7 +75,17 @@ export function ArticlePage({ locale, post }: { locale: Locale; post: BlogPost }
           <div className="article-body">
             <div className="article-author">
               <span aria-hidden="true">BL</span>
-              <div><strong>{post.author}</strong><small>{post.authorRole}</small></div>
+              <div className="article-byline">
+                <strong>{post.author}</strong>
+                <small>{post.authorRole}</small>
+                {post.reviewer && (
+                  <div className="article-reviewer">
+                    <span>{post.reviewerLabel}</span>
+                    <strong>{post.reviewer}</strong>
+                    <small>{post.reviewerRole}</small>
+                  </div>
+                )}
+              </div>
               <div className="article-dates"><small>{t.published}: {post.date}</small><small>{t.updated}: {post.updatedDate}</small></div>
             </div>
             <aside className="article-takeaways">

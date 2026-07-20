@@ -38,6 +38,9 @@
 - Páginas individuales con metadatos SEO, contenido, CTA y artículos relacionados creadas.
 - Navegación de la landing conectada a contacto y blog.
 - Revisión editorial de Victoria incorporada: los seis artículos fueron ampliados con secciones, ejemplos, listas y criterios de seguridad.
+- Victoria Del Real autorizó su identificación como revisora científica y pedagógica, con el cargo “Profesora de Química y Biología”.
+- Artículo 1: ajustes solicitados incorporados en planificación de seguridad, lista de cotejo y evaluación de proceso; pendiente de confirmación final de Victoria.
+- Artículos 2, 3 y 4: aprobados por Victoria y acreditados con su revisión.
 - Seis ilustraciones editoriales originales creadas y optimizadas para acompañar cada artículo.
 - Autoría de equipo, fechas de publicación y actualización, textos alternativos y pies de imagen incorporados.
 - Política editorial bilingüe creada, incluyendo originalidad, revisión humana, uso responsable de IA, correcciones e independencia publicitaria.
@@ -46,7 +49,7 @@
 
 ### Aprobación requerida para cerrar el Día 3
 
-Diego debe validar el flujo comercial, los datos de contacto y la claridad del formulario. Victoria debe revisar el texto ampliado de los seis artículos, corregirlo con su experiencia y autorizar expresamente cualquier atribución personal antes de cerrar el Día 3.
+Diego debe confirmar el flujo comercial corregido. Victoria debe confirmar el artículo 1 ajustado y revisar los artículos 5 y 6 antes de cerrar el Día 3.
 
 ## Siguiente jornada
 

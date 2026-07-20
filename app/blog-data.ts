@@ -22,6 +22,9 @@ export type BlogPost = {
   imageCaption: string;
   author: string;
   authorRole: string;
+  reviewer?: string;
+  reviewerLabel?: string;
+  reviewerRole?: string;
   takeaways: readonly string[];
   content: readonly BlogSection[];
 };
@@ -35,6 +38,9 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
   es: [
     {
       ...sharedAuthor.es,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Revisión científica y pedagógica",
+      reviewerRole: "Profesora de Química y Biología",
       slug: "como-organizar-jornada-cientifica-colegio",
       title: "Cómo organizar una jornada científica en un colegio",
       excerpt: "Una ruta práctica para definir objetivos, estaciones, tiempos, seguridad y evaluación sin transformar la jornada en una carga para el equipo educativo.",
@@ -91,7 +97,20 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
         {
           heading: "Planificar seguridad, montaje y personas responsables",
           paragraphs: [
-            "Cada actividad necesita una ficha simple con materiales, riesgos previsibles, protección requerida, forma de desechar residuos y responsable de la estación. Se deben evitar mezclas desconocidas, recipientes cerrados en reacciones que liberan gas y materiales que puedan confundirse con alimentos.",
+            "Estos son los principales elementos que debes considerar al preparar cada estación:",
+          ],
+          bullets: [
+            "Materiales y cantidades que se utilizarán en la actividad.",
+            "Riesgos previsibles y medidas para prevenirlos.",
+            "Elementos de protección personal requeridos.",
+            "Forma de limpiar el espacio y desechar o almacenar los residuos.",
+            "Persona adulta responsable de supervisar la estación.",
+            "Restricciones claras: evitar mezclas desconocidas, recipientes cerrados en reacciones que liberan gas y materiales que puedan confundirse con alimentos.",
+          ],
+        },
+        {
+          heading: "Preparar la logística del espacio",
+          paragraphs: [
             "La logística también incluye circulación, mesas estables, pisos protegidos, lavado de manos y separación entre experimentos y zonas de comida. Una prueba previa con las cantidades reales permite estimar tiempos y detectar problemas antes de recibir a los cursos.",
           ],
         },
@@ -99,13 +118,16 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
           heading: "Evaluar sin convertir la jornada en una prueba",
           paragraphs: [
             "La evaluación puede ser breve y útil. Al finalizar cada estación, el grupo puede completar una frase —“observamos que…”, “creemos que ocurrió porque…”—, dibujar un resultado o elegir qué variable cambiaría en un nuevo intento.",
-            "El equipo docente puede registrar participación, capacidad de explicar y preguntas nuevas. Esas evidencias permiten mejorar futuras jornadas y conectar lo vivido con las clases siguientes.",
+            "Una lista de cotejo permite registrar de manera simple si cada estudiante o grupo cumple criterios observables. Puede complementarse con una evaluación de proceso que considere cómo participa, formula hipótesis, sigue las medidas de seguridad, registra evidencias, colabora y modifica sus ideas durante la experiencia.",
+            "Estas evidencias no buscan calificar el momento de sorpresa. Sirven para reconocer avances, retroalimentar el aprendizaje, mejorar futuras jornadas y conectar lo vivido con las clases siguientes.",
           ],
           bullets: [
-            "¿La mayoría pudo manipular u observar de cerca?",
-            "¿Las instrucciones fueron comprendidas sin repetirse individualmente demasiadas veces?",
-            "¿Aparecieron explicaciones además de reacciones de sorpresa?",
-            "¿Qué estación debería simplificarse, ampliarse o reemplazarse?",
+            "Participa y puede manipular u observar los materiales de manera segura.",
+            "Comprende y sigue las instrucciones de la estación.",
+            "Registra una observación o evidencia del resultado.",
+            "Explica lo ocurrido utilizando sus observaciones.",
+            "Colabora con su grupo y respeta los roles acordados.",
+            "Propone una pregunta, mejora o nuevo intento a partir de la experiencia.",
           ],
         },
         {
@@ -119,6 +141,9 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
     },
     {
       ...sharedAuthor.es,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Revisión científica y pedagógica",
+      reviewerRole: "Profesora de Química y Biología",
       slug: "experimentos-cientificos-seguros-con-ninos",
       title: "5 experimentos científicos seguros para hacer con niños",
       excerpt: "Cinco actividades para explorar densidad, tensión superficial, movimiento y reacciones, con preguntas, materiales cotidianos y criterios claros de seguridad.",
@@ -196,6 +221,9 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
     },
     {
       ...sharedAuthor.es,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Revisión científica y pedagógica",
+      reviewerRole: "Profesora de Química y Biología",
       slug: "que-es-educacion-stem",
       title: "Qué es la educación STEM y por qué es importante",
       excerpt: "Una explicación práctica de cómo ciencia, tecnología, ingeniería y matemática se conectan para investigar preguntas y mejorar soluciones.",
@@ -265,6 +293,9 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
     },
     {
       ...sharedAuthor.es,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Revisión científica y pedagógica",
+      reviewerRole: "Profesora de Química y Biología",
       slug: "aprender-ciencia-jugando-curiosidad",
       title: "Por qué aprender ciencia jugando mejora la curiosidad infantil",
       excerpt: "El juego guiado crea espacio para predecir, probar y equivocarse, mientras la persona adulta convierte la experiencia en una investigación.",
@@ -477,6 +508,9 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
   en: [
     {
       ...sharedAuthor.en,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Review of the Spanish source",
+      reviewerRole: "Chemistry and Biology Teacher",
       slug: "how-to-plan-a-school-science-day",
       title: "How to plan a science day at school",
       excerpt: "A practical route for defining learning goals, stations, timing, safety and evaluation without overloading the education team.",
@@ -493,13 +527,17 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
         { heading: "Start with what students should learn", paragraphs: ["A strong science day begins with one specific question: what should students observe, test, compare or explain by the end? This goal helps the team choose age-appropriate activities and prevents the day from becoming a collection of unrelated effects.", "The goal can remain simple. Younger students may compare how materials behave, while older groups can control one variable or defend an explanation with evidence."] },
         { heading: "Run a practical diagnosis", paragraphs: ["Before building the programme, gather the school’s real conditions. This early conversation reduces last-minute changes and helps adapt language, materials and pace."], bullets: ["Student numbers, ages and participating classes.", "Available time and possible rotation pattern.", "Rooms, courtyard, water, electricity and accessibility.", "Teachers and adults available at each station.", "Existing resources, sensory needs and material budget."] },
         { heading: "Choose a format that holds attention", paragraphs: ["Stations are often easier to manage than a long demonstration. Each needs one central action, a visible question and an outcome that can be observed within a short period.", "For groups needing more support, reduce the number of steps and assign roles such as handling materials, observing, recording and explaining."], bullets: ["A 10–15 minute shared opening.", "Stations of roughly 15–25 minutes.", "Short reset periods between rotations.", "A 15-minute shared closing conversation."] },
-        { heading: "Plan safety, setup and responsibilities", paragraphs: ["Each activity needs a simple sheet covering materials, foreseeable risks, protection, waste and the responsible adult. Avoid unknown mixtures, sealed gas-producing reactions and anything that could be mistaken for food.", "Plan circulation, stable tables, protected floors, handwashing and separation from food. Test the exact quantities beforehand."] },
-        { heading: "Evaluate without turning the day into a test", paragraphs: ["Students can finish a station with a sentence such as ‘we observed…’, draw a result or suggest one variable to change. Teachers can record participation, explanations and new questions.", "These small pieces of evidence improve future events and help connect the experience with later lessons."], bullets: ["Could most students handle or observe the materials?", "Were instructions understood?", "Did explanations appear alongside surprise?", "Which station should be simplified or extended?"] },
+        { heading: "Plan safety, setup and responsibilities", paragraphs: ["These are the main elements to consider when preparing each station:"], bullets: ["Materials and quantities used in the activity.", "Foreseeable risks and preventive measures.", "Required personal protective equipment.", "Cleaning, waste disposal or storage procedures.", "The adult responsible for supervising the station.", "Clear restrictions: avoid unknown mixtures, sealed gas-producing reactions and anything that could be mistaken for food."] },
+        { heading: "Prepare the space", paragraphs: ["Plan circulation, stable tables, protected floors, handwashing and separation from food. Test the exact quantities beforehand to estimate timing and identify problems before students arrive."] },
+        { heading: "Evaluate without turning the day into a test", paragraphs: ["Students can finish a station with a sentence such as ‘we observed…’, draw a result or suggest one variable to change.", "A checklist can record simple, observable criteria for each student or group. It can be paired with process assessment that considers participation, hypotheses, safety, evidence, collaboration and changes of mind during the experience.", "This evidence is not meant to grade the moment of surprise. It supports feedback, future planning and connections with later lessons."], bullets: ["Participates and handles or observes materials safely.", "Understands and follows the station instructions.", "Records an observation or evidence from the result.", "Explains what happened using observations.", "Collaborates and respects agreed roles.", "Suggests a question, improvement or new trial."] },
         { heading: "A final checklist", paragraphs: ["Confirm the programme, people, materials and room plan one week before the event. Prepare labelled boxes and spares the day before, then record inventory and team observations afterwards.", "Boom! Lab can adapt this structure to one workshop, a STEM day or a multi-session programme, always starting from the school’s context."] },
       ],
     },
     {
       ...sharedAuthor.en,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Review of the Spanish source",
+      reviewerRole: "Chemistry and Biology Teacher",
       slug: "safe-science-experiments-for-children",
       title: "5 safe science experiments to try with children",
       excerpt: "Five ways to explore density, surface tension, movement and reactions with everyday materials, clear questions and adult supervision.",
@@ -523,6 +561,9 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
     },
     {
       ...sharedAuthor.en,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Review of the Spanish source",
+      reviewerRole: "Chemistry and Biology Teacher",
       slug: "what-is-stem-education",
       title: "What is STEM education and why does it matter?",
       excerpt: "A practical look at how science, technology, engineering and mathematics connect through investigation and iterative design.",
@@ -545,6 +586,9 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
     },
     {
       ...sharedAuthor.en,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Review of the Spanish source",
+      reviewerRole: "Chemistry and Biology Teacher",
       slug: "learning-science-through-play",
       title: "Why learning science through play supports curiosity",
       excerpt: "Guided play creates room to predict, test and revise ideas while an adult helps turn experience into investigation.",
