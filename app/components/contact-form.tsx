@@ -3,6 +3,12 @@
 import { useState, type FormEvent } from "react";
 import { contactDetails, type Locale } from "../content";
 
+type PreparedRequest = {
+  emailHref: string;
+  text: string;
+  whatsappHref: string;
+};
+
 const copy = {
   es: {
     fields: {
@@ -23,10 +29,16 @@ const copy = {
       location: "Ej.: Concepción, Biobío",
       message: "Edad, objetivo, espacio disponible y cualquier dato que nos ayude a orientarte.",
     },
-    submit: "Preparar solicitud",
+    submit: "Continuar para enviar",
     sending: "Preparando…",
     required: "Los campos marcados con * son obligatorios.",
-    success: "Solicitud preparada. Confirma el envío en la aplicación de correo que se abrió en tu dispositivo.",
+    successTitle: "Tu solicitud está lista",
+    success: "Elige cómo enviarla. Boom! Lab recibirá los datos sólo cuando confirmes el envío en WhatsApp o en tu aplicación de correo.",
+    whatsapp: "Enviar por WhatsApp",
+    email: "Enviar por correo",
+    copy: "Copiar solicitud",
+    copied: "Solicitud copiada",
+    copyError: "No pudimos copiarla automáticamente. Elige WhatsApp o correo.",
     error: "Revisa los campos obligatorios antes de continuar.",
     subject: "Nueva solicitud desde boomlab.cl",
     privacy: "Leer política de privacidad",
@@ -50,10 +62,16 @@ const copy = {
       location: "E.g. Concepción, Biobío",
       message: "Age group, goal, available space and any details that will help us guide you.",
     },
-    submit: "Prepare request",
+    submit: "Continue to send",
     sending: "Preparing…",
     required: "Fields marked * are required.",
-    success: "Your request is ready. Please confirm sending it in the email application opened on your device.",
+    successTitle: "Your request is ready",
+    success: "Choose how to send it. Boom! Lab will receive your details only after you confirm in WhatsApp or your email application.",
+    whatsapp: "Send via WhatsApp",
+    email: "Send via email",
+    copy: "Copy request",
+    copied: "Request copied",
+    copyError: "We could not copy it automatically. Please choose WhatsApp or email.",
     error: "Please review the required fields before continuing.",
     subject: "New enquiry from boomlab.cl",
     privacy: "Read the privacy policy",
@@ -63,6 +81,8 @@ const copy = {
 export function ContactForm({ locale }: { locale: Locale }) {
   const t = copy[locale];
   const [status, setStatus] = useState<"idle" | "error" | "success">("idle");
+  const [preparedRequest, setPreparedRequest] = useState<PreparedRequest | null>(null);
+  const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
 
   function submitForm(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -86,13 +106,53 @@ export function ContactForm({ locale }: { locale: Locale }) {
       `${t.fields.message}:`,
       String(data.get("message")),
     ];
-    const href = `mailto:${contactDetails.email}?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    const text = lines.join("\n");
+    const emailHref = `mailto:${contactDetails.email}?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(text)}`;
+    const whatsappHref = `${contactDetails.whatsappHref}?text=${encodeURIComponent(`${t.subject}\n\n${text}`)}`;
+
+    setPreparedRequest({ emailHref, text, whatsappHref });
+    setCopyStatus("idle");
     setStatus("success");
-    window.location.href = href;
+    window.requestAnimationFrame(() => {
+      document.getElementById("contact-send-options")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }
+
+  async function copyRequest() {
+    if (!preparedRequest) return;
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(preparedRequest.text);
+      } else {
+        const field = document.createElement("textarea");
+        field.value = preparedRequest.text;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+        document.body.appendChild(field);
+        field.select();
+        const copied = document.execCommand("copy");
+        document.body.removeChild(field);
+        if (!copied) throw new Error("Copy command failed");
+      }
+      setCopyStatus("copied");
+    } catch {
+      setCopyStatus("error");
+    }
   }
 
   return (
-    <form className="contact-form" onSubmit={submitForm} noValidate>
+    <form
+      className="contact-form"
+      onSubmit={submitForm}
+      onChange={() => {
+        if (status !== "idle") setStatus("idle");
+        if (preparedRequest) setPreparedRequest(null);
+        if (copyStatus !== "idle") setCopyStatus("idle");
+      }}
+      noValidate
+    >
       <p className="form-required">{t.required}</p>
       <div className="field-grid">
         <label className="form-field">
@@ -137,12 +197,35 @@ export function ContactForm({ locale }: { locale: Locale }) {
       </label>
       <div className="form-submit-row">
         <button className="button" type="submit">{t.submit}<span aria-hidden="true">→</span></button>
-        {status !== "idle" && (
+        {status === "error" && (
           <p className={`form-status form-status-${status}`} role="status">
-            {status === "success" ? t.success : t.error}
+            {t.error}
           </p>
         )}
       </div>
+      {status === "success" && preparedRequest && (
+        <section id="contact-send-options" className="form-send-options" aria-live="polite">
+          <span className="form-send-icon" aria-hidden="true">✓</span>
+          <div>
+            <h2>{t.successTitle}</h2>
+            <p>{t.success}</p>
+            <div className="form-send-actions">
+              <a className="button button-whatsapp" href={preparedRequest.whatsappHref} target="_blank" rel="noreferrer">
+                {t.whatsapp}<span aria-hidden="true">↗</span>
+              </a>
+              <a className="button button-outline" href={preparedRequest.emailHref}>
+                {t.email}<span aria-hidden="true">→</span>
+              </a>
+              <button className="form-copy-button" type="button" onClick={copyRequest}>{t.copy}</button>
+            </div>
+            {copyStatus !== "idle" && (
+              <p className={`form-copy-status form-copy-status-${copyStatus}`} role="status">
+                {copyStatus === "copied" ? t.copied : t.copyError}
+              </p>
+            )}
+          </div>
+        </section>
+      )}
     </form>
   );
 }

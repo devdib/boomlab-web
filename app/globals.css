@@ -252,6 +252,17 @@ button, input, textarea { font: inherit; }
 .form-status { max-width: 420px; margin: 0; padding: 12px 15px; border-radius: 12px; font-size: .8rem; line-height: 1.45; }
 .form-status-success { background: #e7f8f3; color: #145e4d; }
 .form-status-error { background: #fff0e9; color: #9a3019; }
+.form-send-options { margin-top: 24px; padding: 24px; display: grid; grid-template-columns: 48px 1fr; gap: 16px; border: 1px solid rgba(66,199,165,.45); border-radius: 22px; background: #e7f8f3; scroll-margin: 24px; }
+.form-send-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: var(--teal); color: var(--ink); font-size: 1.25rem; font-weight: 900; }
+.form-send-options h2 { margin: 1px 0 8px; font-size: 1.35rem; line-height: 1.1; letter-spacing: -.035em; }
+.form-send-options p { margin: 0; color: var(--ink-soft); font-size: .86rem; line-height: 1.55; }
+.form-send-actions { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+.form-send-actions .button { min-height: 46px; padding: 0 18px; font-size: .8rem; box-shadow: none; }
+.form-send-actions .button-whatsapp { width: auto; }
+.form-copy-button { min-height: 46px; padding: 0 16px; border: 0; background: transparent; color: var(--orange-dark); font: inherit; font-size: .78rem; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.form-copy-status { margin-top: 12px !important; font-weight: 750; }
+.form-copy-status-copied { color: #145e4d !important; }
+.form-copy-status-error { color: #9a3019 !important; }
 .contact-side { display: grid; gap: 20px; }
 .contact-info-card { padding: 30px; border-radius: 30px; background: var(--ink); color: white; }
 .contact-info-icon { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 18px; background: var(--yellow); color: var(--ink); font-size: 1.8rem; }
@@ -396,6 +407,10 @@ button, input, textarea { font: inherit; }
   .blog-card-visual { min-height: 135px; }
   .form-field-wide { grid-column: auto; }
   .form-submit-row { align-items: stretch; flex-direction: column; }
+  .form-send-options { grid-template-columns: 1fr; padding: 20px; }
+  .form-send-actions { flex-direction: column; }
+  .form-send-actions .button, .form-send-actions .button-whatsapp { width: 100%; }
+  .form-copy-button { width: 100%; }
   .article-header { padding: 45px 0 115px; }
   .article-figure { margin-top: -72px; }
   .article-figure img { border-width: 5px; border-radius: 24px; }

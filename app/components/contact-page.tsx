@@ -6,7 +6,7 @@ const copy = {
   es: {
     eyebrow: "Hagamos ciencia juntos",
     title: "Cuéntanos qué quieres activar.",
-    intro: "Completa estos datos y prepararemos la solicitud para enviarla a Boom! Lab. Te responderemos con los siguientes pasos y la información necesaria para evaluar tu actividad.",
+    intro: "Completa estos datos y podrás enviar la solicitud a Boom! Lab por WhatsApp o correo. Te responderemos con los siguientes pasos y la información necesaria para evaluar tu actividad.",
     directTitle: "También puedes escribirnos directamente",
     directBody: "Para una consulta breve, usa WhatsApp. Para enviar antecedentes o documentos, escríbenos por correo.",
     whatsapp: "Conversar por WhatsApp",
@@ -19,7 +19,7 @@ const copy = {
   en: {
     eyebrow: "Let’s make science happen",
     title: "Tell us what you want to activate.",
-    intro: "Share the details below and we will prepare your enquiry for Boom! Lab. We will reply with the next steps and the information needed to assess your activity.",
+    intro: "Share the details below and send your enquiry to Boom! Lab via WhatsApp or email. We will reply with the next steps and the information needed to assess your activity.",
     directTitle: "You can also contact us directly",
     directBody: "Use WhatsApp for a quick question, or email us when you need to attach background information or documents.",
     whatsapp: "Chat on WhatsApp",

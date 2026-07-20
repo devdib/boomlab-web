@@ -30,6 +30,7 @@
 - Página de contacto bilingüe creada.
 - Formulario con validación de campos obligatorios, correo, cantidad de participantes y consentimiento implementado.
 - Receptor de solicitudes configurado: `boomlabciencia@gmail.com`.
+- Revisión de Diego incorporada: el formulario muestra una confirmación visible y permite enviar la solicitud completa por WhatsApp o correo, con copia al portapapeles como respaldo.
 - Accesos directos a WhatsApp, correo e Instagram incorporados.
 - Blog bilingüe navegable creado.
 - Buscador por palabras clave y filtros por categoría implementados.
