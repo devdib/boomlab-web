@@ -3,7 +3,7 @@
 **Versión:** 2.0  
 **Periodo:** 20 de julio al 28 de agosto de 2026  
 **Modelo:** AI-first  
-**Estado actual:** Semana 1 — Construcción del MVP web  
+**Estado actual:** Semana 1 — Día 2 cerrado; próximo hito: contacto y blog funcional  
 **Objetivo:** Publicar la web en dos semanas y cerrar, dentro de seis semanas, la oferta comercial, los materiales institucionales, la guía digital, el marketplace inicial y la primera campaña de prospección.
 
 ## 1. Principio de trabajo

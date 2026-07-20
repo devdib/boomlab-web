@@ -12,7 +12,7 @@
 - Diseño revisado y aprobado por Diego Ibaceta y Victoria del Real.
 - Código, build y despliegue verificados.
 
-## Día 2 — Ejecutado; pendiente de aprobación comercial consolidada
+## Día 2 — Cerrado
 
 - Hero español completo.
 - Públicos atendidos identificados: colegios y equipos educativos; familias y celebraciones; SLEP, municipios y comunidades.
@@ -22,14 +22,7 @@
 - Navegación revisada y enlace “Para quiénes” incorporado.
 - Promesas revisadas para evitar precios, capacidades o resultados no confirmados.
 - Comportamiento responsive y versión inglesa coherente implementados.
-
-### Aprobación requerida para cerrar el Día 2
-
-Diego y Victoria deben revisar en una sola ronda:
-
-1. ¿Los tres públicos representan correctamente a los clientes prioritarios?
-2. ¿La navegación permite entender rápidamente qué ofrece Boom! Lab?
-3. ¿Las descripciones y promesas son comercial y operacionalmente correctas?
+- Aprobación consolidada recibida el 21 de julio de 2026.
 
 ## Siguiente jornada
 
