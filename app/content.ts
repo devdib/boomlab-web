@@ -36,6 +36,8 @@ export const content = {
       title: "Una experiencia que llega hasta donde están aprendiendo.",
       tags: ["Observar", "Probar", "Preguntar", "Descubrir"],
     },
+    heroImageAlt:
+      "Niñas y niños participan en un experimento de volcán guiado por Boom! Lab.",
     experiencesEyebrow: "Experiencias a la medida",
     experiencesTitle: "Distintos formatos, la misma curiosidad encendida.",
     experiencesIntro:
@@ -128,6 +130,8 @@ export const content = {
       title: "A science experience that arrives wherever learning happens.",
       tags: ["Observe", "Test", "Question", "Discover"],
     },
+    heroImageAlt:
+      "Children take part in a volcano experiment guided by Boom! Lab.",
     experiencesEyebrow: "Experiences made to fit",
     experiencesTitle: "Different formats. The same curiosity switched on.",
     experiencesIntro:

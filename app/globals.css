@@ -76,18 +76,19 @@ button, input, textarea { font: inherit; }
 .orbit { position: absolute; border: 1px dashed rgba(18,50,74,.2); border-radius: 50%; }
 .orbit-one { width: 500px; height: 500px; }
 .orbit-two { width: 380px; height: 380px; }
-.experiment-card { position: absolute; border: 1px solid rgba(18,50,74,.12); box-shadow: 0 30px 70px rgba(18,50,74,.14); }
-.card-main { z-index: 3; width: min(405px, 88%); min-height: 440px; padding: 32px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; border-radius: 42px; background: rgba(255,255,255,.94); transform: rotate(2deg); }
-.card-main .flask-mark { width: 90px; height: 102px; transform: scale(2.7); transform-origin: left center; margin: 18px 0 18px 16px; }
-.card-main h2 { max-width: 330px; font-size: 2rem; line-height: 1.08; letter-spacing: -.045em; }
-.card-topline { width: 100%; display: flex; justify-content: space-between; color: var(--ink-soft); font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
-.live-dot { color: var(--teal); }
-.tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag-row span { padding: 8px 11px; border-radius: 999px; background: var(--sky); color: var(--ink); font-size: .72rem; font-weight: 720; }
-.card-back { z-index: 1; top: 42px; right: -4px; width: 230px; height: 260px; border-radius: 34px; background: var(--teal); transform: rotate(12deg); padding: 24px; }
-.card-front { z-index: 4; bottom: 28px; left: -6px; width: 180px; height: 170px; border-radius: 30px; background: var(--yellow); transform: rotate(-8deg); padding: 22px; }
-.mini-label { font-size: .72rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
-.atom-symbol, .front-symbol { position: absolute; right: 22px; bottom: 18px; font-size: 4.6rem; color: var(--ink); }
+.hero-photo-card { position: relative; z-index: 3; width: min(430px, 88%); aspect-ratio: 4 / 5; margin: 0; overflow: hidden; border: 8px solid white; border-radius: 44px; background: white; box-shadow: 0 34px 75px rgba(18,50,74,.2); transform: rotate(1.5deg); }
+.hero-photo-card img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-photo-caption { position: absolute; inset: auto 0 0; padding: 86px 28px 27px; display: flex; flex-direction: column; align-items: flex-start; background: linear-gradient(transparent, rgba(9,22,40,.9)); color: white; }
+.hero-photo-caption > span { margin-bottom: 8px; color: var(--yellow); font-size: .7rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.hero-photo-caption strong { max-width: 330px; font-size: 1.35rem; line-height: 1.17; letter-spacing: -.025em; }
+.photo-tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.photo-tag-row span { padding: 6px 9px; border-radius: 999px; background: rgba(255,255,255,.9); color: var(--ink); font-size: .63rem; font-weight: 760; }
+.photo-accent { position: absolute; border-radius: 34px; box-shadow: 0 20px 45px rgba(18,50,74,.1); }
+.photo-accent-teal { z-index: 1; top: 38px; right: 2px; width: 235px; height: 275px; background: var(--teal); transform: rotate(12deg); }
+.photo-accent-yellow { z-index: 2; bottom: 34px; left: 4px; width: 175px; height: 160px; background: var(--yellow); transform: rotate(-9deg); }
+.photo-badge { position: absolute; z-index: 5; left: -4px; bottom: 55px; width: 126px; height: 126px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 28px; background: var(--orange); color: white; transform: rotate(-7deg); box-shadow: 0 22px 45px rgba(18,50,74,.18); }
+.photo-badge span { font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
+.photo-badge b { align-self: flex-end; color: var(--yellow); font-size: 2.4rem; }
 .spark { position: absolute; z-index: 6; color: var(--orange); font-size: 2rem; }
 .spark-a { top: 20px; left: 7%; }.spark-b { right: 3%; bottom: 18%; color: var(--teal); }
 .section { padding: 105px 0; }
@@ -180,10 +181,11 @@ button, input, textarea { font: inherit; }
   .proof-item { min-width: 0; }
   .hero-visual { min-height: 430px; }
   .orbit-one { width: 410px; height: 410px; }.orbit-two { width: 310px; height: 310px; }
-  .card-main { min-height: 360px; padding: 24px; }
-  .card-main .flask-mark { transform: scale(2.1); margin-left: 12px; }
-  .card-main h2 { font-size: 1.5rem; }
-  .card-back { right: -40px; }.card-front { left: -35px; width: 145px; height: 135px; }
+  .hero-photo-card { width: min(390px, 88%); }
+  .photo-accent-teal { right: -35px; }
+  .photo-accent-yellow { left: -32px; }
+  .photo-badge { left: -18px; bottom: 42px; width: 105px; height: 105px; padding: 18px; }
+  .photo-badge b { font-size: 2rem; }
   .section { padding: 76px 0; }
   .section-heading h2, .process-heading h2, .about-copy h2 { font-size: 2.6rem; }
   .experience-grid, .post-grid { grid-template-columns: 1fr; }

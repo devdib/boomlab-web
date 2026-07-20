@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { contactDetails, content, type Locale } from "../content";
 
 function FlaskMark() {
@@ -75,29 +76,33 @@ export function LandingPage({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="hero-visual" aria-label={t.labCard.title}>
+          <div className="hero-visual">
             <div className="orbit orbit-one" />
             <div className="orbit orbit-two" />
             <span className="spark spark-a">✦</span>
             <span className="spark spark-b">✦</span>
-            <div className="experiment-card card-back">
-              <span className="mini-label">STEM</span>
-              <span className="atom-symbol">⚛</span>
-            </div>
-            <div className="experiment-card card-main">
-              <div className="card-topline">
+            <div className="photo-accent photo-accent-teal" aria-hidden="true" />
+            <div className="photo-accent photo-accent-yellow" aria-hidden="true" />
+            <figure className="hero-photo-card">
+              <Image
+                src="/images/boomlab-volcan-hero.webp"
+                alt={t.heroImageAlt}
+                width="1200"
+                height="1500"
+                sizes="(max-width: 680px) 88vw, (max-width: 980px) 390px, 430px"
+                priority
+              />
+              <figcaption className="hero-photo-caption">
                 <span>{t.labCard.label}</span>
-                <span className="live-dot">●</span>
-              </div>
-              <FlaskMark />
-              <h2>{t.labCard.title}</h2>
-              <div className="tag-row">
-                {t.labCard.tags.map((tag) => <span key={tag}>{tag}</span>)}
-              </div>
-            </div>
-            <div className="experiment-card card-front">
-              <span className="mini-label">Boom!</span>
-              <span className="front-symbol">◎</span>
+                <strong>{t.labCard.title}</strong>
+                <div className="photo-tag-row" aria-hidden="true">
+                  {t.labCard.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                </div>
+              </figcaption>
+            </figure>
+            <div className="photo-badge" aria-hidden="true">
+              <span>BOOM!</span>
+              <b>✦</b>
             </div>
           </div>
         </div>
