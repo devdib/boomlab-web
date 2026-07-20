@@ -37,7 +37,9 @@ export const content = {
       tags: ["Observar", "Probar", "Preguntar", "Descubrir"],
     },
     heroImageAlt:
-      "Niñas y niños participan en un experimento de volcán guiado por Boom! Lab.",
+      "Niña con antiparras de seguridad junto a un volcán de espuma en un taller científico de Boom! Lab.",
+    heroImageAltSecondary:
+      "Niñas y niños observan la reacción de un volcán guiados por Boom! Lab.",
     experiencesEyebrow: "Experiencias a la medida",
     experiencesTitle: "Distintos formatos, la misma curiosidad encendida.",
     experiencesIntro:
@@ -131,7 +133,9 @@ export const content = {
       tags: ["Observe", "Test", "Question", "Discover"],
     },
     heroImageAlt:
-      "Children take part in a volcano experiment guided by Boom! Lab.",
+      "A child wearing safety goggles beside a foaming volcano during a Boom! Lab science workshop.",
+    heroImageAltSecondary:
+      "Children observe a volcano reaction guided by Boom! Lab.",
     experiencesEyebrow: "Experiences made to fit",
     experiencesTitle: "Different formats. The same curiosity switched on.",
     experiencesIntro:

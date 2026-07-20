@@ -1,4 +1,5 @@
 import { contactDetails, content, type Locale } from "../content";
+import { HeroGallery } from "./hero-gallery";
 
 function FlaskMark() {
   return (
@@ -82,28 +83,18 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <span className="spark spark-b">✦</span>
             <div className="photo-accent photo-accent-teal" aria-hidden="true" />
             <div className="photo-accent photo-accent-yellow" aria-hidden="true" />
-            <figure className="hero-photo-card">
-              {/* The direct asset path avoids relying on the runtime image proxy. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/boomlab-volcan-hero.webp"
-                alt={t.heroImageAlt}
-                width="1120"
-                height="1400"
-                loading="eager"
-                fetchPriority="high"
-              />
-              <figcaption className="hero-photo-caption">
-                <span>{t.labCard.label}</span>
-                <strong>{t.labCard.title}</strong>
-                <div className="photo-tag-row" aria-hidden="true">
-                  {t.labCard.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
-              </figcaption>
-            </figure>
-            <div className="photo-badge" aria-hidden="true">
-              <span>BOOM!</span>
-              <b>✦</b>
+            <HeroGallery
+              altPrimary={t.heroImageAlt}
+              altSecondary={t.heroImageAltSecondary}
+              locale={locale}
+            />
+
+            <div className="hero-photo-caption">
+              <span>{t.labCard.label}</span>
+              <strong>{t.labCard.title}</strong>
+              <div className="photo-tag-row" aria-hidden="true">
+                {t.labCard.tags.map((tag) => <span key={tag}>{tag}</span>)}
+              </div>
             </div>
           </div>
         </div>
