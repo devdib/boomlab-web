@@ -1,11 +1,18 @@
 export type Locale = "es" | "en";
 
+export const contactDetails = {
+  email: "boomlabciencia@gmail.com",
+  whatsappHref: "https://wa.me/56935195275",
+  instagramHandle: "@Boomlab.cl",
+  instagramHref: "https://www.instagram.com/boomlab.cl/",
+} as const;
+
 export const content = {
   es: {
     localeName: "ES",
     alternateLocale: "EN",
     alternateHref: "/en",
-    location: "Concepción · Biobío · Ciencia móvil",
+    location: "Santiago · Concepción · Ciencia móvil",
     nav: [
       ["Experiencias", "#experiencias"],
       ["Cómo funciona", "#como-funciona"],
@@ -81,20 +88,23 @@ export const content = {
     faqs: [
       ["¿A qué edades están dirigidas las experiencias?", "Trabajamos principalmente con niñas y niños de 4 a 14 años, adaptando lenguaje, materiales y desafío."],
       ["¿Boom! Lab lleva los materiales?", "Sí. El formato móvil considera materiales y equipamiento de la actividad. Los requisitos del espacio se informan antes de confirmar."],
-      ["¿En qué comunas trabajan?", "Nuestra base está en Concepción y la cobertura inicial se concentra en Biobío. Evaluamos otras comunas según el formato y la fecha."],
+      ["¿En qué comunas trabajan?", "Nuestra cobertura inicial considera Santiago y Concepción. Evaluamos otras comunas según el formato, la fecha y los requerimientos de traslado."],
     ],
     contactEyebrow: "Hagamos ciencia juntos",
     contactTitle: "Cuéntanos qué quieres activar.",
     contactBody:
       "Indícanos si buscas una experiencia para un colegio, una comunidad o una celebración. Te ayudaremos a encontrar el formato adecuado.",
-    contactCta: "Datos de contacto por confirmar",
+    contactCta: "Cotizar una actividad",
+    contactWhatsappMessage:
+      "Hola, quisiera cotizar una actividad de Boom! Lab.",
+    footerLocation: "Santiago y Concepción, Chile",
     footer: "Ciencia que se vive, se toca y se descubre.",
   },
   en: {
     localeName: "EN",
     alternateLocale: "ES",
     alternateHref: "/es",
-    location: "Concepción · Biobío · Mobile science",
+    location: "Santiago · Concepción · Mobile science",
     nav: [
       ["Experiences", "#experiences"],
       ["How it works", "#how-it-works"],
@@ -170,13 +180,16 @@ export const content = {
     faqs: [
       ["What ages are the experiences designed for?", "We mainly work with children aged 4 to 14, adapting language, materials and challenge."],
       ["Does Boom! Lab bring the materials?", "Yes. Our mobile format includes the materials and equipment for each activity. Venue requirements are shared before confirmation."],
-      ["Where do you operate?", "We are based in Concepción and initially serve the Biobío Region. Other locations are assessed according to format and date."],
+      ["Where do you operate?", "Our initial service area includes Santiago and Concepción. Other locations are assessed according to format, date and travel requirements."],
     ],
     contactEyebrow: "Let’s make science happen",
     contactTitle: "Tell us what you want to activate.",
     contactBody:
       "Let us know whether you are planning an experience for a school, community or celebration. We will help you find the right format.",
-    contactCta: "Contact details to be confirmed",
+    contactCta: "Request a quote",
+    contactWhatsappMessage:
+      "Hello, I would like to request a quote for a Boom! Lab activity.",
+    footerLocation: "Santiago and Concepción, Chile",
     footer: "Science you can live, touch and discover.",
   },
 } as const;
