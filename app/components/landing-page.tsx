@@ -1,4 +1,4 @@
-import { content, type Locale } from "../content";
+import { contactDetails, content, type Locale } from "../content";
 
 function FlaskMark() {
   return (
@@ -208,9 +208,22 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <h2>{t.contactTitle}</h2>
             <p>{t.contactBody}</p>
           </div>
-          <button className="button button-light" type="button" disabled>
-            {t.contactCta}
-          </button>
+          <div className="contact-actions">
+            <a
+              className="button button-light"
+              href={`${contactDetails.whatsappHref}?text=${encodeURIComponent(t.contactWhatsappMessage)}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t.contactCta}
+            </a>
+            <div className="contact-links">
+              <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
+              <a href={contactDetails.instagramHref} target="_blank" rel="noreferrer">
+                {contactDetails.instagramHandle}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -218,7 +231,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
         <div className="shell footer-inner">
           <div className="footer-brand" aria-label="Boom! Lab"><BrandLogo /></div>
           <p>{t.footer}</p>
-          <span>© 2026 · Concepción, Chile</span>
+          <span>© 2026 · {t.footerLocation}</span>
         </div>
       </footer>
     </main>
