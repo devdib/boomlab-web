@@ -40,7 +40,8 @@ export function BlogIndex({ locale }: { locale: Locale }) {
     const normalized = query.trim().toLocaleLowerCase(locale);
     return posts.filter((post) => {
       const matchesCategory = category === t.all || post.category === category;
-      const searchable = `${post.title} ${post.excerpt} ${post.category}`.toLocaleLowerCase(locale);
+      const body = post.content.flatMap((section) => [section.heading, ...section.paragraphs, ...(section.bullets ?? []), section.callout ?? ""]).join(" ");
+      const searchable = `${post.title} ${post.excerpt} ${post.category} ${post.takeaways.join(" ")} ${body}`.toLocaleLowerCase(locale);
       return matchesCategory && (!normalized || searchable.includes(normalized));
     });
   }, [category, locale, posts, query, t.all]);
@@ -68,11 +69,15 @@ export function BlogIndex({ locale }: { locale: Locale }) {
         <div className="blog-card-grid">
           {filteredPosts.map((post) => (
             <article className={`blog-card blog-card-${post.tone}`} key={post.slug}>
-              <div className="blog-card-visual" aria-hidden="true"><span>{post.icon}</span></div>
+              <a className="blog-card-visual" href={`/${locale}/blog/${post.slug}`} tabIndex={-1} aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={post.image} alt="" loading="lazy" width="800" height="450" />
+              </a>
               <div className="blog-card-content">
                 <div className="post-meta"><span>{post.category}</span><span>{post.readTime}</span></div>
                 <h2><a href={`/${locale}/blog/${post.slug}`}>{post.title}</a></h2>
                 <p>{post.excerpt}</p>
+                <span className="blog-byline">{post.author}</span>
                 <a className="read-more" href={`/${locale}/blog/${post.slug}`}>{t.read} <b>→</b></a>
               </div>
             </article>

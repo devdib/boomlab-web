@@ -29,6 +29,7 @@ const copy = {
     success: "Solicitud preparada. Confirma el envío en la aplicación de correo que se abrió en tu dispositivo.",
     error: "Revisa los campos obligatorios antes de continuar.",
     subject: "Nueva solicitud desde boomlab.cl",
+    privacy: "Leer política de privacidad",
   },
   en: {
     fields: {
@@ -55,6 +56,7 @@ const copy = {
     success: "Your request is ready. Please confirm sending it in the email application opened on your device.",
     error: "Please review the required fields before continuing.",
     subject: "New enquiry from boomlab.cl",
+    privacy: "Read the privacy policy",
   },
 } as const;
 
@@ -131,7 +133,7 @@ export function ContactForm({ locale }: { locale: Locale }) {
       </div>
       <label className="form-consent">
         <input name="consent" type="checkbox" required />
-        <span>{t.fields.consent} *</span>
+        <span>{t.fields.consent} * <a href={locale === "es" ? "/es/privacidad" : "/en/privacy"}>{t.privacy}</a>.</span>
       </label>
       <div className="form-submit-row">
         <button className="button" type="submit">{t.submit}<span aria-hidden="true">→</span></button>

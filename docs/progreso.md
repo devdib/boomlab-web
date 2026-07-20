@@ -36,10 +36,16 @@
 - Seis artículos iniciales publicados en español y adaptados al inglés.
 - Páginas individuales con metadatos SEO, contenido, CTA y artículos relacionados creadas.
 - Navegación de la landing conectada a contacto y blog.
+- Revisión editorial de Victoria incorporada: los seis artículos fueron ampliados con secciones, ejemplos, listas y criterios de seguridad.
+- Seis ilustraciones editoriales originales creadas y optimizadas para acompañar cada artículo.
+- Autoría de equipo, fechas de publicación y actualización, textos alternativos y pies de imagen incorporados.
+- Política editorial bilingüe creada, incluyendo originalidad, revisión humana, uso responsable de IA, correcciones e independencia publicitaria.
+- Política de privacidad bilingüe creada, preparada para contacto, cookies, analítica y futura integración con Google AdSense.
+- Metadatos de artículos, sitemap y robots preparados para indexación cuando el sitio sea público y tenga dominio definitivo.
 
 ### Aprobación requerida para cerrar el Día 3
 
-Diego debe validar el flujo comercial, los datos de contacto y la claridad del formulario. Victoria debe revisar los seis temas, la exactitud del contenido y su utilidad para docentes y familias.
+Diego debe validar el flujo comercial, los datos de contacto y la claridad del formulario. Victoria debe revisar el texto ampliado de los seis artículos, corregirlo con su experiencia y autorizar expresamente cualquier atribución personal antes de cerrar el Día 3.
 
 ## Siguiente jornada
 

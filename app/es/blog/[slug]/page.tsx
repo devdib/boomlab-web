@@ -10,7 +10,18 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost("es", slug);
-  return post ? { title: `${post.title} | Boom! Lab`, description: post.excerpt } : {};
+  const index = blogPosts.es.findIndex((item) => item.slug === slug);
+  const translation = blogPosts.en[index];
+  return post ? {
+    title: `${post.title} | Boom! Lab`,
+    description: post.excerpt,
+    authors: [{ name: post.author }],
+    alternates: {
+      canonical: `/es/blog/${post.slug}`,
+      languages: translation ? { "es-CL": `/es/blog/${post.slug}`, en: `/en/blog/${translation.slug}` } : undefined,
+    },
+    openGraph: { title: post.title, description: post.excerpt, type: "article", images: [{ url: post.image, alt: post.imageAlt }] },
+  } : {};
 }
 
 export default async function SpanishArticlePage({ params }: { params: Promise<{ slug: string }> }) {

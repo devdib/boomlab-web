@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://boomlab-web.dibaceta.chatgpt.site"),
   title: "Boom! Lab | Ciencia que se vive, se toca y se descubre",
   description:
     "Experiencias científicas prácticas para niñas, niños, colegios, familias y comunidades.",
@@ -22,6 +23,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo-boomlab.svg",
     shortcut: "/logo-boomlab.svg",
+  },
+  openGraph: {
+    siteName: "Boom! Lab",
+    type: "website",
+    locale: "es_CL",
   },
 };
 

@@ -164,7 +164,8 @@ export function LandingPage({ locale }: { locale: Locale }) {
             {featuredPosts.map((post, index) => (
               <article className={index === 0 ? "post-card post-featured" : "post-card"} key={post.slug}>
                 <div className={`post-visual visual-${index + 1}`}>
-                  <span>{post.icon}</span>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={post.image} alt="" loading="lazy" width="800" height="450" />
                 </div>
                 <div className="post-content">
                   <div className="post-meta"><span>{post.category}</span><span>{post.readTime}</span></div>

@@ -55,11 +55,17 @@ export function SiteHeader({
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const t = content[locale];
+  const links = locale === "es"
+    ? [["Política editorial", "/es/politica-editorial"], ["Privacidad", "/es/privacidad"], ["Contacto", "/es/contacto"]]
+    : [["Editorial policy", "/en/editorial-policy"], ["Privacy", "/en/privacy"], ["Contact", "/en/contact"]];
   return (
     <footer className="site-footer">
       <div className="shell footer-inner">
         <div className="footer-brand" aria-label="Boom! Lab"><BrandLogo /></div>
         <p>{t.footer}</p>
+        <nav className="footer-links" aria-label={locale === "es" ? "Información legal y editorial" : "Legal and editorial information"}>
+          {links.map(([label, href]) => <a href={href} key={href}>{label}</a>)}
+        </nav>
         <span>© 2026 · {t.footerLocation}</span>
       </div>
     </footer>
