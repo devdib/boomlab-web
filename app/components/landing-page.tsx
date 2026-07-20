@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { contactDetails, content, type Locale } from "../content";
 
 function FlaskMark() {
@@ -84,13 +83,15 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <div className="photo-accent photo-accent-teal" aria-hidden="true" />
             <div className="photo-accent photo-accent-yellow" aria-hidden="true" />
             <figure className="hero-photo-card">
-              <Image
+              {/* The direct asset path avoids relying on the runtime image proxy. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/images/boomlab-volcan-hero.webp"
                 alt={t.heroImageAlt}
-                width="1200"
-                height="1500"
-                sizes="(max-width: 680px) 88vw, (max-width: 980px) 390px, 430px"
-                priority
+                width="1120"
+                height="1400"
+                loading="eager"
+                fetchPriority="high"
               />
               <figcaption className="hero-photo-caption">
                 <span>{t.labCard.label}</span>
