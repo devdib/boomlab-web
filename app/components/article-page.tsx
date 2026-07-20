@@ -98,6 +98,12 @@ export function ArticlePage({ locale, post }: { locale: Locale; post: BlogPost }
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 {section.bullets && <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}
                 {section.callout && <blockquote>{section.callout}</blockquote>}
+                {section.sources && (
+                  <div className="article-sources" aria-label={locale === "es" ? "Fuentes de esta sección" : "Sources for this section"}>
+                    <strong>{locale === "es" ? "Investigaciones citadas" : "Research cited"}</strong>
+                    {section.sources.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label}<span aria-hidden="true">↗</span></a>)}
+                  </div>
+                )}
               </section>
             ))}
             <a className="article-editorial-link" href={locale === "es" ? "/es/politica-editorial" : "/en/editorial-policy"}>{t.editorial} →</a>

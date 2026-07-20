@@ -309,6 +309,10 @@ button, input, textarea { font: inherit; }
 .article-content-section li { margin: 0 0 11px; padding-left: 7px; line-height: 1.65; }
 .article-content-section li::marker { color: var(--orange); }
 .article-content-section blockquote { margin: 28px 0; padding: 24px 26px; border-left: 5px solid var(--orange); border-radius: 0 20px 20px 0; background: var(--cream); color: var(--ink); font-size: 1.18rem; font-weight: 720; line-height: 1.55; }
+.article-sources { margin-top: 26px; padding: 22px; display: grid; gap: 11px; border: 1px solid var(--line); border-radius: 20px; background: #f7fbfc; }
+.article-sources > strong { margin-bottom: 2px; font-size: .72rem; text-transform: uppercase; letter-spacing: .065em; }
+.article-sources a { display: flex; justify-content: space-between; gap: 14px; color: var(--orange-dark); font-size: .8rem; font-weight: 720; line-height: 1.45; text-decoration: underline; text-decoration-color: rgba(194,54,19,.3); text-underline-offset: 3px; }
+.article-sources a:hover { color: var(--ink); }
 .article-editorial-link { display: inline-flex; margin-top: 5px; padding-bottom: 5px; border-bottom: 2px solid var(--ink); font-size: .78rem; font-weight: 820; text-transform: uppercase; letter-spacing: .045em; }
 .article-cta { position: sticky; top: 110px; padding: 30px; border-radius: 30px; background: var(--ink); color: white; }
 .article-cta .eyebrow { color: var(--yellow); }

@@ -5,6 +5,7 @@ export type BlogSection = {
   paragraphs: readonly string[];
   bullets?: readonly string[];
   callout?: string;
+  sources?: readonly { label: string; href: string }[];
 };
 
 export type BlogPost = {
@@ -364,73 +365,88 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
     },
     {
       ...sharedAuthor.es,
-      slug: "actividades-cientificas-cumpleanos-infantiles",
-      title: "Ideas de actividades científicas para cumpleaños infantiles",
-      excerpt: "Cómo elegir una experiencia participativa, segura y compatible con la edad, el espacio y el ritmo completo de una celebración.",
-      category: "Consejos para familias",
-      readTime: "8 min",
+      slug: "importancia-juego-aire-libre-desarrollo-infantil",
+      title: "Importancia del juego al aire libre en el desarrollo infantil",
+      excerpt: "Qué aporta el juego libre en espacios exteriores al movimiento, la creatividad, la autonomía y la convivencia, según la investigación disponible.",
+      category: "Desarrollo infantil",
+      readTime: "9 min",
       date: "20 de julio de 2026",
       updatedDate: "20 de julio de 2026",
-      icon: "✺",
+      icon: "☀",
       tone: "teal",
-      image: "/images/blog/actividades-cientificas-cumpleanos.webp",
-      imageAlt: "Niñas y niños participan en una actividad científica de cumpleaños con materiales seguros y coloridos.",
-      imageCaption: "Ilustración editorial original de una celebración científica participativa y organizada.",
+      image: "/images/blog/importancia-juego-aire-libre.webp",
+      imageAlt: "Niñas y niños juegan al aire libre con ramas, hojas y elementos naturales mientras una persona adulta acompaña a distancia.",
+      imageCaption: "Ilustración editorial original de Boom! Lab sobre juego libre, autonomía y exploración de la naturaleza.",
       takeaways: [
-        "La actividad debe ajustarse a la edad, cantidad de participantes y tolerancia del espacio al agua o residuos.",
-        "Un formato equilibrado combina demostración, participación y un cierre común.",
-        "Montaje, ejecución y desmontaje deben acordarse antes de la celebración.",
+        "El exterior ofrece más posibilidades de movimiento, exploración y juego creado por niñas y niños.",
+        "Los elementos naturales favorecen formas variadas de juego imaginativo y resolución de problemas.",
+        "La tarea adulta es retirar peligros no evidentes y acompañar sin dirigir cada decisión.",
       ],
       content: [
         {
-          heading: "Una experiencia central, no una pausa improvisada",
+          heading: "Jugar afuera es más que gastar energía",
           paragraphs: [
-            "Una actividad científica puede convertirse en el momento principal de un cumpleaños cuando todas y todos tienen algo que observar, decidir o hacer. Para lograrlo, el experimento debe funcionar con grupos, tener instrucciones breves y producir un resultado visible sin exigir una espera demasiado larga.",
-            "También necesita encajar en el ritmo de la celebración. Conviene definir con anticipación cuándo se realizará, qué ocurrirá con la comida y dónde esperarán quienes terminen antes.",
+            "Cuando niñas y niños salen al patio, una plaza o un entorno natural, no sólo cambian de escenario. Encuentran superficies, distancias, sonidos, materiales y desafíos que no están completamente definidos de antemano. Una rama puede convertirse en herramienta, límite o parte de una construcción; una pendiente invita a ajustar el equilibrio y una hoja despierta preguntas sobre forma, color o textura.",
+            "Ese carácter abierto permite que el juego sea iniciado y transformado por quienes participan. Correr importa, pero también importa elegir, imaginar, negociar reglas, observar y volver a intentar.",
+          ],
+          callout: "El valor del juego al aire libre no depende de organizar una actividad perfecta, sino de disponer de tiempo, un lugar posible y margen para decidir.",
+        },
+        {
+          heading: "Qué muestra la investigación disponible",
+          paragraphs: [
+            "Las investigaciones sobre juego exterior incluyen diseños, edades y contextos muy distintos. Por eso conviene hablar de tendencias y asociaciones, no de promesas automáticas. Una revisión sistemática encontró relaciones generalmente positivas entre el tiempo al aire libre, la actividad física y algunos indicadores de condición física, aunque advirtió que la evidencia disponible no permitía asumir causalidad en todos los casos.",
+            "Otra revisión centrada en juego libre en la naturaleza identificó resultados positivos consistentes en actividad física y conductas de juego cognitivo, como el juego imaginativo y dramático. Sus autores también señalaron diferencias importantes entre los estudios y la necesidad de investigaciones más robustas.",
+          ],
+          sources: [
+            { label: "Gray et al. (2015): revisión sistemática sobre tiempo al aire libre, actividad física y condición física", href: "https://www.mdpi.com/1660-4601/12/6/6455" },
+            { label: "Dankiw et al. (2020): revisión sistemática sobre juego libre en la naturaleza y desarrollo infantil", href: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229006" },
           ],
         },
         {
-          heading: "Cinco formatos que se pueden adaptar",
-          paragraphs: ["La elección depende más del grupo y del espacio que del efecto más espectacular."],
+          heading: "Movimiento, creatividad y convivencia",
+          paragraphs: [
+            "Un espacio exterior suele permitir desplazamientos amplios, cambios de velocidad, saltos, arrastre y equilibrio. Esas acciones aparecen dentro del propósito del juego y no sólo como una serie de ejercicios indicados por una persona adulta.",
+            "Cuando hay tierra, agua, piedras, hojas, semillas o ramas, los materiales no tienen una única forma correcta de uso. Esto abre oportunidades para construir, clasificar, representar historias y resolver problemas. Al jugar con otras personas también se negocian turnos, límites, reglas y significados compartidos.",
+          ],
+        },
+        {
+          heading: "Autonomía y desafíos que se pueden evaluar",
+          paragraphs: [
+            "Jugar con un desafío no equivale a quedar expuesto a un peligro que no se puede reconocer. Equilibrarse sobre un tronco bajo, decidir desde dónde saltar o explorar una superficie irregular permite percibir límites, ajustar movimientos y tomar decisiones.",
+            "Una revisión sistemática sobre juego exterior con riesgo encontró asociaciones positivas con actividad física y salud social, pero calificó la evidencia entre muy baja y moderada. La conclusión útil no es que todo riesgo sea beneficioso, sino que la seguridad debe distinguir entre un desafío visible que puede evaluarse y un peligro oculto que debe eliminarse.",
+          ],
+          sources: [
+            { label: "Brussoni et al. (2015): revisión sistemática sobre juego exterior con riesgo y salud infantil", href: "https://www.mdpi.com/1660-4601/12/6/6423" },
+          ],
+        },
+        {
+          heading: "El papel de las personas adultas",
+          paragraphs: [
+            "Acompañar no significa intervenir en cada movimiento. La persona adulta revisa el lugar, retira vidrios, tránsito u otros peligros que una niña o niño no podría anticipar, acuerda límites comprensibles y permanece disponible.",
+            "Durante el juego puede observar antes de ofrecer una solución y preguntar: ¿qué estás intentando?, ¿qué necesitas para hacerlo más estable?, ¿cómo sabrás si es seguro? La ayuda aumenta cuando la edad, el contexto o una necesidad particular lo requieren.",
+          ],
           bullets: [
-            "Volcanes y reacciones: demostración central con participación por turnos y protección de superficies.",
-            "Exploración con lupas: estaciones con elementos naturales, observación y desafíos de clasificación.",
-            "Paleontología: búsqueda, excavación simulada y conversación sobre evidencias del pasado.",
-            "Polímeros y materiales: comparación de texturas y propiedades con recetas previamente probadas.",
-            "Desafíos de movimiento: construir, lanzar o impulsar objetos livianos con criterios simples.",
+            "Elegir un espacio permitido, visible y acorde con la edad.",
+            "Considerar sombra, hidratación, clima, protección solar y ropa adecuada.",
+            "Revisar accesibilidad y ofrecer distintas maneras de participar.",
+            "Establecer límites simples sin transformar el juego en una secuencia de instrucciones.",
+            "Observar, escuchar y ayudar cuando el desafío supera las capacidades actuales.",
           ],
         },
         {
-          heading: "Edad, cantidad y nivel de participación",
+          heading: "Cómo abrir más oportunidades de juego exterior",
           paragraphs: [
-            "Para edades pequeñas es preferible una secuencia corta, visual y con ayuda adulta cercana. En grupos mayores se pueden asignar roles y agregar predicciones o mediciones. Si existe una diferencia amplia de edades, conviene preparar una responsabilidad adicional para quienes terminan más rápido.",
-            "El número de participantes define cuántos materiales duplicar y cuántas personas deben acompañar. Una experiencia de Boom! Lab suele organizarse para que cada niña o niño tenga un turno claro, evitando que el grupo dependa de una única demostración.",
+            "No todas las familias y comunidades tienen el mismo acceso a plazas seguras, patios, tiempo disponible o áreas verdes. Una revisión de 107 estudios mostró que el juego exterior depende de factores personales, familiares, sociales, ambientales y estacionales. Por eso no corresponde tratarlo sólo como una decisión individual.",
+            "Escuelas, municipios, comunidades y familias pueden aportar protegiendo tiempos de juego, habilitando lugares cercanos y ofreciendo materiales simples. No siempre se necesita una gran área natural: un patio, una sede comunitaria o una plaza pueden ganar posibilidades con elementos sueltos, zonas de sombra y libertad para transformar el espacio.",
           ],
-        },
-        {
-          heading: "Espacio y tiempos realistas",
-          paragraphs: [
-            "Reserva una zona con mesas estables, circulación segura y distancia respecto de alimentos, regalos y equipos electrónicos. Si habrá agua, espuma o tierra, informa previamente cómo se protegerán pisos y muebles.",
-            "Como referencia de planificación, un formato puede considerar 20 a 30 minutos de montaje, 45 a 60 minutos de experiencia y 15 a 25 minutos de desmontaje. El tiempo exacto se confirma según actividad y lugar, manteniendo el ciclo completo dentro de dos horas cuando las condiciones lo permiten.",
-          ],
-          callout: "El efecto sorpresa funciona mejor cuando la logística permanece invisible para las familias.",
-        },
-        {
-          heading: "Seguridad y convivencia con la celebración",
-          paragraphs: [
-            "Los materiales se mantienen identificados y fuera del alcance hasta comenzar. Se separan alimentos, se revisan alergias y se dispone de agua para lavado. Cuando existe riesgo de salpicadura se utilizan antiparras y la persona facilitadora controla cantidades y turnos.",
-            "Además del equipo que guía la actividad, debe permanecer una persona adulta responsable de la celebración. Su función es acompañar necesidades individuales y mantener despejada el área de trabajo.",
-          ],
-        },
-        {
-          heading: "Preguntas antes de cotizar",
-          paragraphs: ["Entregar esta información permite recomendar un formato posible y transparente."],
           bullets: [
-            "Edad de quien celebra y rango de edades de invitados.",
-            "Cantidad aproximada de participantes y adultos presentes.",
-            "Comuna, fecha, horario y si el lugar es interior o exterior.",
-            "Disponibilidad de mesas, agua y protección de pisos.",
-            "Intereses del grupo, necesidades de apoyo y restricciones del recinto.",
+            "Reservar un momento frecuente sin objetivo productivo ni competencia.",
+            "Ofrecer cajas, telas, recipientes, cuerdas cortas u objetos naturales adecuados a la edad.",
+            "Alternar exploración libre con preguntas breves de observación.",
+            "Permitir que el juego continúe otro día en lugar de exigir un resultado terminado.",
+          ],
+          sources: [
+            { label: "Lee et al. (2021): revisión sistemática de factores asociados al juego y tiempo al aire libre", href: "https://link.springer.com/article/10.1186/s12966-021-01097-9" },
           ],
         },
       ],
@@ -611,24 +627,24 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
     },
     {
       ...sharedAuthor.en,
-      slug: "science-activities-for-childrens-birthdays",
-      title: "Science activity ideas for children’s birthdays",
-      excerpt: "How to choose a safe, participatory experience that fits the age group, venue and complete rhythm of a celebration.",
-      category: "Family guidance",
-      readTime: "8 min",
+      slug: "why-outdoor-play-matters-for-child-development",
+      title: "Why outdoor play matters for child development",
+      excerpt: "What child-led outdoor play can contribute to movement, creativity, autonomy and social development, according to the available research.",
+      category: "Child development",
+      readTime: "9 min",
       date: "July 20, 2026", updatedDate: "July 20, 2026",
-      icon: "✺", tone: "teal",
-      image: "/images/blog/actividades-cientificas-cumpleanos.webp",
-      imageAlt: "Children take part in a colourful, organised science birthday activity.",
-      imageCaption: "Original editorial illustration of a participatory science celebration.",
-      takeaways: ["Match the activity to age, group size and the venue’s tolerance for water or residue.", "Balance demonstration, participation and a shared closing.", "Agree setup, delivery and pack-down before the event."],
+      icon: "☀", tone: "teal",
+      image: "/images/blog/importancia-juego-aire-libre.webp",
+      imageAlt: "Children play outdoors with branches, leaves and natural materials while an adult observes from a respectful distance.",
+      imageCaption: "Original Boom! Lab editorial illustration about child-led play, autonomy and nature exploration.",
+      takeaways: ["Outdoor spaces offer varied opportunities for movement, exploration and child-led play.", "Natural loose parts can support imaginative play and problem-solving.", "Adults remove hidden hazards while leaving room for children to make decisions."],
       content: [
-        { heading: "Make it the centrepiece", paragraphs: ["A science activity can become the main birthday moment when every child has something to observe, decide or do. It must work for a group, use brief instructions and produce a visible outcome without long waits.", "Plan when it will happen, how food is separated and what early finishers can do."] },
-        { heading: "Five adaptable formats", paragraphs: ["Choose according to the group and venue, not only the most dramatic effect."], bullets: ["Volcanoes and open reactions with protected surfaces.", "Magnifying-glass exploration and classification challenges.", "Simulated fossil excavation and evidence-based discussion.", "Polymers and material properties using pre-tested recipes.", "Movement challenges with lightweight objects and simple criteria."] },
-        { heading: "Age, numbers and participation", paragraphs: ["Younger groups need a short, visual sequence and close adult support. Older children can take roles, predict and measure. Mixed ages benefit from an extra responsibility for early finishers.", "Participant numbers determine duplicated materials and staffing. Everyone should have a clear turn instead of depending on one demonstration."] },
-        { heading: "Realistic space and timing", paragraphs: ["Use stable tables, safe circulation and distance from food, presents and electronics. Explain in advance how floors and furniture will be protected.", "A planning reference is 20–30 minutes for setup, 45–60 minutes for the activity and 15–25 minutes for pack-down. Exact timing depends on the experience and venue, with the full cycle kept within two hours where conditions allow."], callout: "The surprise works best when families do not need to see the logistics behind it." },
-        { heading: "Safety within the celebration", paragraphs: ["Keep materials labelled and out of reach until the activity begins. Separate food, check allergies, provide handwashing and use goggles where splashing is possible.", "A responsible adult from the celebration should remain present alongside the facilitator to support individual needs and keep the work area clear."] },
-        { heading: "Questions before requesting a quote", paragraphs: ["These details allow a provider to recommend a realistic format."], bullets: ["Age range and approximate participant count.", "City, date, time and indoor or outdoor venue.", "Tables, water and floor protection.", "Group interests and support needs.", "Venue restrictions and adult availability."] },
+        { heading: "Outdoor play is more than using up energy", paragraphs: ["A courtyard, park or natural area offers surfaces, distances, sounds and materials that are not fully defined in advance. A branch can become a tool or part of a construction, while a slope invites children to adjust balance and speed.", "Movement matters, but so do choice, imagination, shared rule-making, observation and repeated attempts."], callout: "Outdoor play does not require a perfect activity—only time, a possible place and room for children to decide." },
+        { heading: "What the available research shows", paragraphs: ["Outdoor-play studies use different ages, settings and methods, so findings should be described as trends and associations rather than automatic promises. One systematic review found generally positive relationships between outdoor time, physical activity and some fitness indicators, while warning that causality could not always be established.", "A review of unstructured nature play reported consistent positive outcomes for physical activity and cognitive play behaviours, including imaginative and dramatic play, while also identifying limitations in the evidence base."], sources: [{ label: "Gray et al. (2015): systematic review of outdoor time, physical activity and fitness", href: "https://www.mdpi.com/1660-4601/12/6/6455" }, { label: "Dankiw et al. (2020): systematic review of unstructured nature play and child development", href: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229006" }] },
+        { heading: "Movement, creativity and social play", paragraphs: ["Outdoor spaces often allow larger movements, varied speeds, jumping, pulling and balancing. These actions arise within the purpose of play rather than as a list of adult-led exercises.", "Soil, water, stones, leaves and branches have no single correct use. They invite construction, classification, stories and problem-solving, while shared play involves negotiating turns, rules and meanings."] },
+        { heading: "Autonomy and manageable challenge", paragraphs: ["A visible challenge is not the same as a hidden hazard. Balancing on a low log or choosing where to step allows children to notice limits and adjust their actions.", "A systematic review found positive associations between risky outdoor play, physical activity and social health, but rated the evidence from very low to moderate. The practical lesson is to distinguish challenges children can assess from hazards adults need to remove."], sources: [{ label: "Brussoni et al. (2015): systematic review of risky outdoor play and child health", href: "https://www.mdpi.com/1660-4601/12/6/6423" }] },
+        { heading: "The adult’s role", paragraphs: ["Adults inspect the setting, remove traffic, broken glass or other hazards children cannot anticipate, agree clear boundaries and remain available without stepping into every decision.", "Observation can come before solutions: what are you trying, what would make it more stable, and how will you know it is safe? Support increases with age, context and individual need."], bullets: ["Choose a permitted, visible and age-appropriate setting.", "Consider shade, water, weather, sun protection and suitable clothing.", "Plan for accessibility and several ways to participate.", "Use simple boundaries without turning play into a sequence of instructions.", "Observe, listen and help when a challenge exceeds current capabilities."] },
+        { heading: "Creating more opportunities", paragraphs: ["Families and communities do not have equal access to safe parks, courtyards, time or green space. A review of 107 studies showed that outdoor play is shaped by individual, family, social, environmental and seasonal factors, so it should not be framed only as a personal choice.", "Schools, councils, communities and families can protect playtime, improve nearby settings and offer simple loose materials. Even a small courtyard or community space can support outdoor play when children may transform it."], bullets: ["Protect regular time without a productive goal or competition.", "Offer age-appropriate boxes, fabric, containers, short ropes or natural loose parts.", "Combine free exploration with occasional observation questions.", "Let play continue on another day instead of requiring a finished product."], sources: [{ label: "Lee et al. (2021): systematic review of factors associated with children’s outdoor play and time", href: "https://link.springer.com/article/10.1186/s12966-021-01097-9" }] },
       ],
     },
     {

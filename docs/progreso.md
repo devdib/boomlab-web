@@ -41,6 +41,7 @@
 - Victoria Del Real autorizó su identificación como revisora científica y pedagógica, con el cargo “Profesora de Química y Biología”.
 - Artículo 1: ajustes solicitados incorporados en planificación de seguridad, lista de cotejo y evaluación de proceso; pendiente de confirmación final de Victoria.
 - Artículos 2, 3 y 4: aprobados por Victoria y acreditados con su revisión.
+- Artículo 5 reemplazado por “Importancia del juego al aire libre en el desarrollo infantil”, con referencias enlazadas a cuatro revisiones sistemáticas; pendiente de revisión de Victoria.
 - Seis ilustraciones editoriales originales creadas y optimizadas para acompañar cada artículo.
 - Autoría de equipo, fechas de publicación y actualización, textos alternativos y pies de imagen incorporados.
 - Política editorial bilingüe creada, incluyendo originalidad, revisión humana, uso responsable de IA, correcciones e independencia publicitaria.
@@ -49,7 +50,7 @@
 
 ### Aprobación requerida para cerrar el Día 3
 
-Diego debe confirmar el flujo comercial corregido. Victoria debe confirmar el artículo 1 ajustado y revisar los artículos 5 y 6 antes de cerrar el Día 3.
+Diego debe confirmar el flujo comercial corregido. Victoria debe confirmar el artículo 1 ajustado y revisar los nuevos artículos 5 y 6 antes de cerrar el Día 3.
 
 ## Siguiente jornada
 
