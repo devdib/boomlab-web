@@ -132,10 +132,15 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <h2>{t.processTitle}</h2>
           </div>
           <div className="process-list">
-            {t.process.map(([number, title, body]) => (
+            {t.process.map(([number, title, body], index) => (
               <article key={number}>
-                <span>{number}</span>
-                <div><h3>{title}</h3><p>{body}</p></div>
+                <div className="process-step-mark" aria-hidden="true">
+                  <span className="process-number">{number}</span>
+                  <span className="process-symbol">
+                    {index === 0 ? "⌖" : index === 1 ? "✎" : "⚗"}
+                  </span>
+                </div>
+                <div className="process-step-copy"><h3>{title}</h3><p>{body}</p></div>
               </article>
             ))}
           </div>
