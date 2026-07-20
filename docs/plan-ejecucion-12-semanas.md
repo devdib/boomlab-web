@@ -1,1017 +1,275 @@
 # Plan de ejecución de Boom! Lab — 12 semanas
 
+**Versión:** 1.1  
 **Periodo:** 20 de julio al 9 de octubre de 2026  
-**Versión:** 1.0  
-**Estado general:** Preparación  
-**Objetivo del ciclo:** Tener una oferta empaquetada y rentable, materiales comerciales utilizables, un sitio bilingüe funcional y una primera campaña institucional en ejecución.
+**Estado actual:** Semana 1 — MVP web  
+**Objetivo del ciclo:** Publicar el MVP web durante las primeras dos semanas y utilizarlo como base para empaquetar, presentar y comercializar la oferta de Boom! Lab.
 
-## 1. Estado actual
+## 1. Cambio de prioridad
 
-| Elemento | Estado |
-|---|---|
-| Repositorio `devdib/boomlab-web` | Completado |
-| Hoja de ruta estratégica inicial | En revisión, PR #1 |
-| División de responsabilidades | Definida |
-| Costos y precios normalizados | Pendiente |
-| Paquetes comerciales | Pendiente |
-| Propuesta para SLEP | Pendiente |
-| Presentaciones | Pendiente |
-| Contenidos web | Pendiente |
-| Desarrollo web | Pendiente |
-| Marketplace | Pendiente |
-| Prospección y reuniones | Pendiente |
+El sitio web ya no depende del cierre completo de precios, talleres o propuestas institucionales.
 
-No se considera iniciada una fase hasta que su entregable anterior esté aprobado.
+Durante las semanas 1 y 2 se construirá y publicará un MVP con:
+
+- Landing page en español e inglés.
+- Página y formulario de contacto.
+- Blog navegable.
+- Buscador por palabras clave.
+- Categorías y artículos relacionados.
+- Última entrada y dos entradas destacadas en portada.
+- Secciones breves de Nosotros y FAQ dentro de la landing.
+- Diseño responsive.
+- SEO técnico básico.
+- Analítica.
+- Estructura preparada para incorporar marketplace, servicios completos y publicidad posteriormente.
+
+Los precios, paquetes definitivos, marketplace y publicidad no bloquearán la publicación.
 
 ## 2. Responsables
 
 ### Diego Ibaceta
 
-Responsable de:
-
-- Administración y planificación.
-- Matrices de costos, precios y márgenes.
-- Condiciones comerciales.
-- Registro y seguimiento en GitHub.
-- Mercado Público y Ley del Lobby.
-- Arquitectura, construcción y administración de la página web.
-- SEO técnico, analítica e integración con marketplace.
-- Base de datos de prospectos y seguimiento comercial.
+- Administración y seguimiento.
+- GitHub y control de versiones.
+- Arquitectura y construcción de la web.
+- Formularios, analítica, SEO técnico y publicación.
+- Costos, precios, Mercado Público y Ley del Lobby.
+- Base de prospectos y seguimiento comercial.
 
 ### Victoria del Real
 
-Responsable de:
-
-- Diseño y estandarización de experiencias.
-- Ejecución operacional de talleres, ferias y cumpleaños.
-- Contenidos pedagógicos y vinculación curricular.
-- Protocolos de seguridad y requerimientos de terreno.
-- Redacción base de fichas, artículos y guías.
-- Selección y organización de fotografías y evidencia.
-- Creación de presentaciones comerciales e institucionales.
-- Relato de casos, testimonios y resultados.
+- Ejecución y estandarización de experiencias.
+- Redacción y revisión de contenidos.
+- Selección de imágenes y evidencia.
+- Artículos del blog.
+- Vinculación pedagógica.
+- Presentaciones y material institucional.
 
 ### Decisiones compartidas
 
-Diego y Victoria aprobarán conjuntamente:
-
-- Talleres que salen al mercado.
-- Precios finales.
 - Promesas comerciales.
-- Capacidad máxima.
-- Alcance territorial.
-- Oferta para SLEP y municipios.
-- Versión final del sitio antes de publicar.
-- Publicación de fotografías, testimonios o casos.
+- Talleres publicados.
+- Precios finales.
+- Uso de imágenes y testimonios.
+- Aprobación del sitio.
+- Alcance de pilotos.
 
-## 3. Forma de trabajo
+## 3. Definición de terminado del MVP web
 
-- Cada tarea diaria debe terminar en un archivo, una decisión registrada o una acción verificable.
-- Los documentos se mantendrán en GitHub.
-- Los viernes se realizará una revisión de 30 minutos.
-- Una tarea no se marca como completada por “haberla conversado”.
-- Los bloqueos se registran el mismo día.
-- No se agregan nuevos servicios al ciclo sin retirar o postergar otra tarea.
+El MVP estará terminado cuando:
 
-## 4. Estructura de seguimiento
-
-Estados permitidos:
-
-- **Pendiente**
-- **En curso**
-- **Bloqueado**
-- **En revisión**
-- **Completado**
-
-Carpetas previstas:
-
-- `docs/business/`: modelo de negocio, costos y precios.
-- `docs/operations/`: fichas de talleres y protocolos.
-- `docs/commercial/`: propuestas, presentaciones y solicitudes.
-- `docs/web/`: arquitectura, SEO y contenidos del sitio.
-- `content/es/`: contenidos publicados en español.
-- `content/en/`: contenidos publicados en inglés.
+- `/es/` y `/en/` funcionen.
+- Landing, contacto y blog sean navegables en móvil y escritorio.
+- El formulario envíe correctamente una solicitud.
+- Victoria pueda entregar nuevos artículos sin rediseñar el sitio.
+- Existan al menos dos artículos en español y uno en inglés.
+- La portada muestre la última entrada y dos artículos destacados.
+- Títulos, metadescripciones, canónicas, `hreflang`, sitemap y `robots.txt` estén configurados.
+- Analítica mida visitas, formularios y clics de contacto.
+- No se soliciten datos personales directamente a menores.
+- No existan errores críticos de contenido o navegación.
 
 ---
 
-# Semana 1 — Fundamentos operacionales y administrativos
+# Semana 1 — Construcción del MVP web
 
 **Fechas:** 20 al 24 de julio  
-**Resultado semanal:** Inventario completo, estructura de costos definida y cinco experiencias prioritarias seleccionadas.
+**Hito:** Versión preliminar navegable con landing, contacto y blog.
 
-## Lunes 20
-
-### Diego
-
-- [ ] Crear estructura de carpetas y tablero de seguimiento.
-- [ ] Registrar el estado inicial del proyecto.
-- [ ] Crear plantilla única para levantar costos, tiempos, capacidad y precio.
-
-**Entregable:** estructura documental y plantilla de levantamiento.
-
-### Victoria
-
-- [ ] Crear inventario de todos los talleres realizados o diseñados.
-- [ ] Para cada taller, registrar edad, duración, capacidad y si ya fue ejecutado.
-- [ ] Identificar cuáles cuentan con fotografías, testimonios o material propio.
-
-**Entregable:** inventario maestro de talleres.
-
-## Martes 21
-
-### Diego
-
-- [ ] Identificar costos fijos mensuales del emprendimiento.
-- [ ] Definir categorías de costos variables.
-- [ ] Definir criterio inicial de pago por hora y jornada de monitora.
-
-**Entregable:** estructura de costos administrativos y de personal.
-
-### Victoria
-
-- [ ] Levantar materiales consumibles del taller Volcán de CO₂.
-- [ ] Levantar materiales reutilizables y vida útil estimada.
-- [ ] Registrar tiempos reales de preparación, montaje, ejecución y desmontaje.
-
-**Entregable:** ficha operacional preliminar de Volcán de CO₂.
-
-## Miércoles 22
-
-### Diego
-
-- [ ] Definir comunas y radio de cobertura inicial.
-- [ ] Crear fórmula para transporte y recargo fuera del radio.
-- [ ] Registrar medios de pago, facturación y condiciones de reserva disponibles.
-
-**Entregable:** política preliminar de cobertura, transporte y pagos.
-
-### Victoria
-
-- [ ] Completar el mismo levantamiento para cuatro talleres adicionales.
-- [ ] Identificar riesgos, EPP y requisitos de espacio de cada uno.
-- [ ] Registrar capacidad máxima con una y dos monitoras.
-
-**Entregable:** cinco fichas operacionales preliminares.
-
-## Jueves 23
-
-### Diego
-
-- [ ] Calcular costo completo y precio mínimo de las cinco experiencias.
-- [ ] Crear tres escenarios de margen: mínimo, objetivo y expansión.
-- [ ] Detectar información faltante sin detener los cálculos preliminares.
-
-**Entregable:** primera matriz de costos y precios.
-
-### Victoria
-
-- [ ] Evaluar las cinco experiencias por facilidad de ejecución, impacto visual, seguridad y repetibilidad.
-- [ ] Ordenarlas desde la más lista para vender hasta la menos lista.
-- [ ] Recomendar menú inicial para talleres y cumpleaños.
-
-**Entregable:** ranking operacional de experiencias.
-
-## Viernes 24
-
-### Diego y Victoria
-
-- [ ] Revisar matriz de costos y ranking.
-- [ ] Seleccionar cinco talleres prioritarios.
-- [ ] Aprobar capacidad, duración y público de cada uno.
-- [ ] Registrar decisiones y bloqueos.
-
-**Hito 1:** cinco experiencias listas para ser empaquetadas.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 20 | Crear estructura del proyecto, definir stack, configurar rama y estructura `/es/`–`/en/`. Definir alcance cerrado del MVP. | Entregar logo, paleta, fotografías disponibles y referencias. Redactar una propuesta de valor de 80–120 palabras. | Proyecto ejecutable y paquete inicial de marca. |
+| Mar 21 | Construir sistema visual, encabezado, navegación, pie y selector de idioma. | Redactar textos de Hero, qué es Boom! Lab, públicos y tres líneas de servicio. | Esqueleto visual y textos principales. |
+| Mié 22 | Construir la landing con Hero, servicios, cómo funciona, blog destacado, FAQ, Nosotros y CTA. | Revisar la landing, acortar textos y seleccionar imágenes por sección. | Landing preliminar en español. |
+| Jue 23 | Construir Contacto, formulario, validaciones y confirmación. Crear estructura del blog y página de artículo. | Redactar FAQ, Nosotros, Contacto y primer artículo en español. | Contacto funcional y blog operativo. |
+| Vie 24 | Implementar buscador, categorías, destacados y responsive. Publicar preview de revisión. | Revisar móvil y escritorio. Entregar correcciones priorizadas, no cambios abiertos. | Preview navegable aprobada para completar. |
 
 ---
 
-# Semana 2 — Talleres y cumpleaños empaquetados
+# Semana 2 — Contenido, SEO y publicación
 
 **Fechas:** 27 al 31 de julio  
-**Resultado semanal:** Catálogo inicial, paquetes de talleres y producto de cumpleaños cotizable.
+**Hito:** MVP web publicado.
 
-## Lunes 27
-
-### Diego
-
-- [ ] Definir plantilla comercial de ficha de servicio.
-- [ ] Definir estructura de precio base, participante adicional, transporte y adicionales.
-- [ ] Crear condiciones de cotización y vigencia.
-
-### Victoria
-
-- [ ] Redactar objetivo, descripción y experiencia del participante para los cinco talleres.
-- [ ] Redactar edad, duración, espacio y requisitos.
-- [ ] Escribir una versión técnica y una versión comercial breve.
-
-**Entregable:** contenido completo de cinco fichas.
-
-## Martes 28
-
-### Diego
-
-- [ ] Crear paquete “Taller en aula”.
-- [ ] Crear paquete “Ciclo científico” de 4, 8 y 12 sesiones.
-- [ ] Definir inclusiones, exclusiones y variables de precio.
-
-### Victoria
-
-- [ ] Agrupar talleres en ciclos coherentes.
-- [ ] Definir progresión pedagógica de 4, 8 y 12 sesiones.
-- [ ] Relacionar cada ciclo con edades y objetivos de aprendizaje.
-
-**Entregable:** paquetes para colegios y afterschools.
-
-## Miércoles 29
-
-### Diego
-
-- [ ] Diseñar modelo comercial de cumpleaños: cargo base y costo variable.
-- [ ] Definir mínimo y máximo de participantes.
-- [ ] Definir reserva, anticipo, reprogramación y cancelación.
-
-### Victoria
-
-- [ ] Seleccionar cuatro experiencias aptas para cumpleaños.
-- [ ] Definir secuencia de 60 minutos para cada una.
-- [ ] Asegurar operación completa en máximo dos horas.
-
-**Entregable:** cuatro formatos de cumpleaños estandarizados.
-
-## Jueves 30
-
-### Diego
-
-- [ ] Calcular precios finales de talleres, ciclos y cumpleaños.
-- [ ] Preparar tabla interna de descuentos autorizados.
-- [ ] Evitar descuentos que reduzcan el margen mínimo.
-
-### Victoria
-
-- [ ] Revisar materiales, seguridad y carga de trabajo de cada paquete.
-- [ ] Preparar checklist de montaje y desmontaje.
-- [ ] Definir qué se lleva cada participante cuando corresponda.
-
-**Entregable:** catálogo costado y protocolo operacional.
-
-## Viernes 31
-
-### Diego y Victoria
-
-- [ ] Simular tres cotizaciones reales: colegio, afterschool y cumpleaños.
-- [ ] Verificar que puedan cotizarse en menos de 15 minutos.
-- [ ] Corregir ambigüedades.
-- [ ] Aprobar la versión 1 del catálogo.
-
-**Hito 2:** talleres y cumpleaños listos para cotizar.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 27 | Implementar metadatos, slugs, canónicas, `hreflang`, sitemap y `robots.txt`. | Finalizar textos españoles y preparar traducción/revisión inglesa de la landing. | Base SEO y landing bilingüe. |
+| Mar 28 | Completar blog, búsqueda, artículos relacionados y lógica de última entrada/destacados. | Entregar segundo artículo en español y primer artículo en inglés. | Tres artículos cargados. |
+| Mié 29 | Configurar analítica, eventos de contacto, privacidad y manejo básico de consentimiento. | Revisar autorizaciones de imágenes, textos alternativos y mensajes del formulario. | Sitio medible y contenido autorizado. |
+| Jue 30 | Ejecutar QA móvil/escritorio, accesibilidad, rendimiento, formularios y enlaces. Configurar dominio o entorno de producción. | Realizar revisión editorial final y preparar anuncio de lanzamiento. | Lista de defectos resuelta y aprobación final. |
+| Vie 31 | Publicar, verificar analítica y corregir incidentes críticos. | Publicar anuncio y recopilar primeras dudas o comentarios. | MVP en producción y línea base registrada. |
 
 ---
 
-# Semana 3 — Feria científica y producto digital
+# Semana 3 — Talleres y costos
 
 **Fechas:** 3 al 7 de agosto  
-**Resultado semanal:** Tres niveles de feria científica definidos y guía digital estructurada.
+**Hito:** Cinco talleres costados, estandarizados y publicables.
 
-## Lunes 3
-
-### Diego
-
-- [ ] Definir los tres niveles comerciales: guía, acompañamiento y feria integral.
-- [ ] Establecer qué se cobra por establecimiento, jornada, curso o participante.
-- [ ] Identificar costos de producción y coordinación.
-
-### Victoria
-
-- [ ] Diseñar las fases pedagógicas de una feria científica.
-- [ ] Definir hitos para docentes y estudiantes.
-- [ ] Establecer criterios de selección de experimentos.
-
-## Martes 4
-
-### Diego
-
-- [ ] Crear estructura de presupuesto de feria.
-- [ ] Incorporar coordinación, visitas, materiales, montaje, personal y cierre.
-- [ ] Crear escenarios para uno, tres y cinco establecimientos.
-
-### Victoria
-
-- [ ] Diseñar diagnóstico de estudiantes, recursos e infraestructura.
-- [ ] Incorporar vulnerabilidad, atención, motivación y autonomía.
-- [ ] Crear criterios de adaptación.
-
-## Miércoles 5
-
-### Diego
-
-- [ ] Definir entregables contractuales por nivel.
-- [ ] Definir requerimientos y responsabilidades del establecimiento.
-- [ ] Identificar exclusiones que deben cotizarse aparte.
-
-### Victoria
-
-- [ ] Definir rúbricas de avance y evaluación final.
-- [ ] Crear calendario tipo por jornadas.
-- [ ] Definir indicadores educativos y de participación.
-
-## Jueves 6
-
-### Diego
-
-- [ ] Crear índice comercial de la guía digital.
-- [ ] Definir formato de venta y archivos incluidos.
-- [ ] Evaluar compatibilidad inicial con Mercado Libre y alternativa de entrega digital.
-
-### Victoria
-
-- [ ] Crear índice pedagógico de 30 a 36 páginas.
-- [ ] Definir plantillas, checklists y rúbricas anexas.
-- [ ] Seleccionar ejemplos de experimentos fáciles de medir.
-
-## Viernes 7
-
-### Diego y Victoria
-
-- [ ] Consolidar metodología y estructura comercial.
-- [ ] Aprobar tres niveles de servicio.
-- [ ] Aprobar índice de la guía.
-- [ ] Seleccionar un formato de feria para ofrecer como piloto.
-
-**Hito 3:** feria científica lista para convertirse en propuesta técnica.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 3 | Crear matriz de costos, horas, transporte, margen y precio. | Crear inventario completo de talleres y seleccionar diez candidatos. | Plantilla de costos e inventario. |
+| Mar 4 | Definir costos fijos, variables y criterio de pago de monitoras. | Levantar consumibles, reutilizables y tiempos de los cinco mejores talleres. | Base económica y operacional. |
+| Mié 5 | Definir radio de cobertura, transporte, reserva y cancelación. | Registrar edad, capacidad, espacio, EPP y riesgos. | Condiciones comerciales y fichas operacionales. |
+| Jue 6 | Calcular precios mínimo, objetivo y expansión. | Evaluar impacto, seguridad, repetibilidad y preparación para venta. | Matriz de precios y ranking. |
+| Vie 7 | Consolidar catálogo y actualizar el sitio. | Aprobar cinco talleres y revisar su publicación. | Cinco talleres listos para cotizar. |
 
 ---
 
-# Semana 4 — Propuesta y presentación para SLEP
+# Semana 4 — Cumpleaños y feria científica
 
 **Fechas:** 10 al 14 de agosto  
-**Resultado semanal:** Propuesta técnica y presentación de máximo 10 diapositivas utilizables.
+**Hito:** Cumpleaños estandarizados y tres niveles de feria definidos.
 
-## Lunes 10
-
-### Diego
-
-- [ ] Crear estructura formal de propuesta técnica.
-- [ ] Definir alcance del piloto SLEP.
-- [ ] Preparar estructura económica y vigencia.
-
-### Victoria
-
-- [ ] Redactar antecedentes, problema y objetivos.
-- [ ] Redactar metodología y resultados esperados.
-- [ ] Definir beneficiarios.
-
-## Martes 11
-
-### Diego
-
-- [ ] Completar cronograma, recursos, responsabilidades y exclusiones.
-- [ ] Incorporar indicadores y mecanismo de informe.
-- [ ] Revisar coherencia comercial.
-
-### Victoria
-
-- [ ] Completar metodología por fases.
-- [ ] Incorporar inclusión, seguridad y adaptación territorial.
-- [ ] Vincular el programa con el currículum.
-
-## Miércoles 12
-
-### Diego
-
-- [ ] Revisar y editar la propuesta completa.
-- [ ] Preparar versión modular para uno o varios establecimientos.
-- [ ] Crear ficha resumen de una página.
-
-### Victoria
-
-- [ ] Crear guion de presentación de 10 diapositivas.
-- [ ] Seleccionar imágenes y evidencia.
-- [ ] Preparar relato oral de 10 minutos.
-
-## Jueves 13
-
-### Diego
-
-- [ ] Revisar precisión, alcance y llamados a la acción de la presentación.
-- [ ] Preparar sección económica para uso posterior a la reunión.
-- [ ] Crear versión para municipios a partir de la propuesta SLEP.
-
-### Victoria
-
-- [ ] Diseñar y completar la presentación.
-- [ ] Ensayar exposición.
-- [ ] Ajustar textos para lectura rápida.
-
-## Viernes 14
-
-### Diego y Victoria
-
-- [ ] Simular reunión institucional de 20 minutos.
-- [ ] Registrar preguntas difíciles y respuestas.
-- [ ] Ajustar propuesta y presentación.
-- [ ] Aprobar material institucional v1.
-
-**Hito 4:** material SLEP listo para presentar.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 10 | Crear fórmula de precio de cumpleaños. | Seleccionar cuatro experiencias y secuencia de 60 minutos. | Modelo comercial y menú inicial. |
+| Mar 11 | Definir mínimos, máximos, reserva, transporte y adicionales. | Crear checklist de montaje, ejecución y desmontaje en menos de dos horas. | Producto de cumpleaños cotizable. |
+| Mié 12 | Definir niveles guía, acompañamiento y feria integral. | Diseñar metodología e hitos pedagógicos de feria. | Arquitectura del servicio. |
+| Jue 13 | Crear presupuesto para uno, tres y cinco establecimientos. | Crear diagnóstico, rúbricas, calendario y criterios de experimentos. | Modelo económico y pedagógico. |
+| Vie 14 | Actualizar páginas del sitio y revisar conversión. | Aprobar contenidos públicos de cumpleaños y feria. | Oferta publicada y coherente. |
 
 ---
 
-# Semana 5 — Arquitectura y estrategia del sitio
+# Semana 5 — Propuesta y presentación SLEP
 
 **Fechas:** 17 al 21 de agosto  
-**Resultado semanal:** Mapa del sitio, conversiones, modelo de contenidos y requerimientos aprobados.
+**Hito:** Propuesta técnica y presentación de máximo 10 diapositivas.
 
-## Lunes 17
-
-### Diego
-
-- [ ] Definir objetivos y conversiones de cada página.
-- [ ] Crear mapa completo del sitio.
-- [ ] Definir navegación y rutas `/es/` y `/en/`.
-
-### Victoria
-
-- [ ] Definir mensaje principal de la marca.
-- [ ] Redactar propuesta de valor por público.
-- [ ] Seleccionar experiencias que aparecerán en portada.
-
-## Martes 18
-
-### Diego
-
-- [ ] Crear wireframe textual de Inicio.
-- [ ] Definir formularios y campos.
-- [ ] Definir llamados a la acción.
-
-### Victoria
-
-- [ ] Redactar contenidos base de Inicio.
-- [ ] Redactar secciones de confianza, metodología y públicos.
-- [ ] Seleccionar fotografías necesarias.
-
-## Miércoles 19
-
-### Diego
-
-- [ ] Crear wireframes de Talleres, Ferias, Cumpleaños y Laboratorio móvil.
-- [ ] Definir integración con marketplace.
-- [ ] Definir recorrido desde artículo a cotización.
-
-### Victoria
-
-- [ ] Redactar contenidos base de las cuatro páginas.
-- [ ] Preparar preguntas frecuentes operacionales.
-- [ ] Identificar testimonios disponibles.
-
-## Jueves 20
-
-### Diego
-
-- [ ] Definir categorías, etiquetas, búsqueda y artículos relacionados.
-- [ ] Crear modelo de datos del blog.
-- [ ] Definir cómo se calculan última entrada y más leídas.
-
-### Victoria
-
-- [ ] Crear 20 ideas de artículos en español.
-- [ ] Agruparlas por clúster.
-- [ ] Seleccionar seis artículos de lanzamiento.
-
-## Viernes 21
-
-### Diego y Victoria
-
-- [ ] Revisar mapa, wireframes y contenidos.
-- [ ] Aprobar el alcance del MVP.
-- [ ] Registrar expresamente lo que queda fuera de la primera versión.
-
-**Hito 5:** especificación funcional del sitio aprobada.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 17 | Crear estructura técnica, alcance y modelo económico del piloto. | Redactar problema, objetivos, beneficiarios y resultados. | Borrador de propuesta. |
+| Mar 18 | Completar cronograma, recursos, responsabilidades y exclusiones. | Completar metodología, inclusión, seguridad y currículum. | Propuesta completa v1. |
+| Mié 19 | Editar y crear ficha resumen de una página. | Crear guion de diez diapositivas. | Propuesta depurada y guion. |
+| Jue 20 | Revisar precisión comercial y versión municipal. | Diseñar presentación y preparar relato oral. | Presentación v1. |
+| Vie 21 | Simular reunión y registrar preguntas. | Exponer, ajustar respuestas y material visual. | Material institucional aprobado. |
 
 ---
 
-# Semana 6 — Contenidos web y SEO
+# Semana 6 — Guía digital de ferias
 
 **Fechas:** 24 al 28 de agosto  
-**Resultado semanal:** Textos en español listos, plan SEO y base de contenido en inglés.
+**Hito:** Guía de 30–36 páginas con anexos definida y 50 % redactada.
 
-## Lunes 24
-
-### Diego
-
-- [ ] Crear mapa de palabras clave por página.
-- [ ] Definir títulos SEO, metadescripciones y slugs.
-- [ ] Definir enlaces internos.
-
-### Victoria
-
-- [ ] Finalizar texto de Inicio y Nosotros.
-- [ ] Finalizar biografía y relato de Boom! Lab.
-- [ ] Revisar tono: moderno, cálido, claro y profesional.
-
-## Martes 25
-
-### Diego
-
-- [ ] Optimizar arquitectura SEO de servicios.
-- [ ] Definir datos estructurados aplicables.
-- [ ] Crear checklist técnico SEO.
-
-### Victoria
-
-- [ ] Finalizar textos de Talleres y Laboratorio móvil.
-- [ ] Incorporar preguntas frecuentes.
-- [ ] Preparar descripciones breves para tarjetas.
-
-## Miércoles 26
-
-### Diego
-
-- [ ] Definir estrategia SEO del blog en español.
-- [ ] Definir estrategia de contenido internacional en inglés.
-- [ ] Evitar depender de traducciones literales.
-
-### Victoria
-
-- [ ] Finalizar textos de Ferias y Cumpleaños.
-- [ ] Redactar FAQ y Contacto.
-- [ ] Redactar primer artículo en español.
-
-## Jueves 27
-
-### Diego
-
-- [ ] Preparar estructura de traducción y revisión.
-- [ ] Crear glosario de términos de marca.
-- [ ] Definir páginas que deben estar en inglés al lanzamiento.
-
-### Victoria
-
-- [ ] Redactar segundo y tercer artículo.
-- [ ] Seleccionar imágenes y preparar textos alternativos.
-- [ ] Revisar el contenido educativo de las traducciones base.
-
-## Viernes 28
-
-### Diego y Victoria
-
-- [ ] Revisar todos los textos españoles.
-- [ ] Aprobar glosario y contenido inicial en inglés.
-- [ ] Confirmar seis artículos de lanzamiento y responsables.
-
-**Hito 6:** contenido suficiente para iniciar la construcción.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 24 | Definir formato, licencia, precio y canal de venta. | Cerrar índice y alcance pedagógico. | Especificación del producto. |
+| Mar 25 | Diseñar archivos, versión y mecanismo de entrega. | Redactar planificación, roles y diagnóstico. | Primer bloque. |
+| Mié 26 | Crear checklist comercial y control de versiones. | Redactar experimentos, seguridad y recursos. | Segundo bloque. |
+| Jue 27 | Preparar portada, ficha comercial y landing futura. | Crear rúbricas, plantillas y checklists. | Anexos preliminares. |
+| Vie 28 | Revisar producto y registrar faltantes. | Editar contenido y validar aplicabilidad. | Guía al 50 % y plan de cierre. |
 
 ---
 
-# Semana 7 — Construcción de la base web
+# Semana 7 — Prospección institucional
 
 **Fechas:** 31 de agosto al 4 de septiembre  
-**Resultado semanal:** Sitio ejecutable con diseño base, navegación y estructura bilingüe.
+**Hito:** Primeras solicitudes y contactos enviados.
 
-## Lunes 31
-
-### Diego
-
-- [ ] Definir stack tecnológico.
-- [ ] Crear proyecto base y reglas del repositorio.
-- [ ] Configurar ramas, dependencias y entorno.
-
-### Victoria
-
-- [ ] Entregar logo, paleta, fotografías y referencias visuales.
-- [ ] Clasificar recursos por sección.
-- [ ] Identificar materiales faltantes.
-
-## Martes 1
-
-### Diego
-
-- [ ] Construir sistema visual: tipografía, colores, botones, tarjetas y espaciados.
-- [ ] Crear encabezado, navegación y pie de página.
-- [ ] Implementar responsive base.
-
-### Victoria
-
-- [ ] Revisar coherencia de marca.
-- [ ] Seleccionar imágenes definitivas de portada.
-- [ ] Preparar reemplazos cuando falte evidencia propia.
-
-## Miércoles 2
-
-### Diego
-
-- [ ] Implementar estructura de idiomas.
-- [ ] Crear rutas y selector ES/EN.
-- [ ] Configurar metadatos por idioma.
-
-### Victoria
-
-- [ ] Revisar textos visibles en la primera maqueta.
-- [ ] Acortar contenido que no sea digerible.
-- [ ] Aprobar jerarquía narrativa.
-
-## Jueves 3
-
-### Diego
-
-- [ ] Construir Inicio.
-- [ ] Implementar tarjetas de experiencias y llamadas a la acción.
-- [ ] Incorporar sección de blog destacada.
-
-### Victoria
-
-- [ ] Revisar Inicio en escritorio y móvil.
-- [ ] Verificar claridad para familias e instituciones.
-- [ ] Registrar correcciones priorizadas.
-
-## Viernes 4
-
-### Diego y Victoria
-
-- [ ] Revisar versión de navegación completa.
-- [ ] Corregir bloqueos críticos.
-- [ ] Aprobar sistema visual y portada.
-
-**Hito 7:** base navegable aprobada.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 31 | Crear base de SLEP, municipios, colegios y afterschools. | Preparar versiones de presentación por público. | Base priorizada y materiales. |
+| Mar 1 | Redactar solicitudes de lobby y correos directos. | Crear relato de casos y respuestas frecuentes. | Mensajes listos. |
+| Mié 2 | Seleccionar diez prospectos y responsables. | Preparar ficha de piloto de una página. | Diez prospectos calificados. |
+| Jue 3 | Ingresar solicitudes y enviar contactos privados. | Preparar material de seguimiento. | Campaña iniciada. |
+| Vie 4 | Registrar respuestas y próximos pasos. | Ajustar presentación según dudas. | Seguimiento activo. |
 
 ---
 
-# Semana 8 — Servicios, blog y formularios
+# Semana 8 — Marketplace y productos
 
 **Fechas:** 7 al 11 de septiembre  
-**Resultado semanal:** MVP funcional con páginas comerciales, blog, buscador y contacto.
+**Hito:** Primer producto publicado o listo para publicación.
 
-## Lunes 7
-
-### Diego
-
-- [ ] Construir Talleres y Laboratorio móvil.
-- [ ] Implementar componentes reutilizables.
-- [ ] Incorporar llamadas a cotizar.
-
-### Victoria
-
-- [ ] Revisar fichas publicadas.
-- [ ] Validar capacidades, edades y requisitos.
-- [ ] Corregir inconsistencias.
-
-## Martes 8
-
-### Diego
-
-- [ ] Construir Ferias científicas y Cumpleaños.
-- [ ] Implementar niveles de servicio.
-- [ ] Integrar preguntas frecuentes.
-
-### Victoria
-
-- [ ] Revisar promesas comerciales.
-- [ ] Verificar que el alcance sea ejecutable.
-- [ ] Aprobar versiones públicas.
-
-## Miércoles 9
-
-### Diego
-
-- [ ] Implementar blog y páginas de artículos.
-- [ ] Implementar categorías y etiquetas.
-- [ ] Implementar búsqueda por palabras clave.
-
-### Victoria
-
-- [ ] Cargar o entregar los tres primeros artículos.
-- [ ] Revisar formato, imágenes y lectura móvil.
-- [ ] Crear llamadas a la acción contextuales.
-
-## Jueves 10
-
-### Diego
-
-- [ ] Implementar formulario de contacto y cotización.
-- [ ] Agregar protección contra spam y validaciones.
-- [ ] Definir recepción y seguimiento de solicitudes.
-
-### Victoria
-
-- [ ] Revisar preguntas del formulario.
-- [ ] Verificar que permitan cotizar sin intercambios innecesarios.
-- [ ] Redactar mensajes de confirmación.
-
-## Viernes 11
-
-### Diego y Victoria
-
-- [ ] Ejecutar recorrido completo de usuario.
-- [ ] Probar familia, colegio y SLEP como tres casos diferentes.
-- [ ] Registrar y priorizar defectos.
-
-**Hito 8:** MVP funcional completo.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 7 | Seleccionar canal y revisar costos, comisiones y logística. | Seleccionar kit físico inicial. | Producto y canal definidos. |
+| Mar 8 | Calcular precio, embalaje, transporte y margen. | Definir contenido, instrucciones y experiencia. | Ficha económica y técnica. |
+| Mié 9 | Crear publicación y proceso de atención. | Crear fotografías, textos e instrucciones. | Publicación preliminar. |
+| Jue 10 | Probar compra, pago y entrega. | Revisar comprensión y seguridad. | Flujo validado. |
+| Vie 11 | Publicar o documentar bloqueo con solución y fecha. | Preparar contenido promocional. | Producto activo o bloqueo controlado. |
 
 ---
 
-# Semana 9 — Inglés, SEO técnico y analítica
+# Semana 9 — Contenido y crecimiento internacional
 
 **Fechas:** 14 al 17 de septiembre  
-**Resultado semanal:** Sitio bilingüe indexable, medible y preparado para cumplimiento.
+**Hito:** Calendario editorial activo y contenido inglés validado.
 
-## Lunes 14
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 14 | Revisar Search Console, consultas, países y páginas. | Proponer diez artículos basados en experiencia real. | Diagnóstico y backlog editorial. |
+| Mar 15 | Definir clústeres y enlaces internos. | Redactar artículo español. | Artículo y mapa interno. |
+| Mié 16 | Investigar términos internacionales y priorizar temas. | Redactar artículo inglés no literal. | Primer contenido internacional estratégico. |
+| Jue 17 | Cargar, optimizar y programar contenidos. | Revisar textos e imágenes. | Dos artículos publicados/programados. |
 
-### Diego
-
-- [ ] Implementar `hreflang`, canónicas, sitemap y robots.
-- [ ] Revisar títulos, metadatos y enlaces.
-- [ ] Preparar integración con Search Console.
-
-### Victoria
-
-- [ ] Revisar traducciones de Inicio y páginas comerciales.
-- [ ] Verificar sentido y tono, no solo literalidad.
-- [ ] Marcar términos dudosos.
-
-## Martes 15
-
-### Diego
-
-- [ ] Configurar analítica y eventos de conversión.
-- [ ] Medir formularios, clics de contacto y marketplace.
-- [ ] Definir panel básico de seguimiento.
-
-### Victoria
-
-- [ ] Revisar y aprobar contenidos ingleses.
-- [ ] Preparar primer artículo internacional.
-- [ ] Validar contenido educativo.
-
-## Miércoles 16
-
-### Diego
-
-- [ ] Implementar privacidad, consentimiento y aviso de cookies cuando corresponda.
-- [ ] Revisar tratamiento de formularios y datos.
-- [ ] Evitar captación directa de datos de menores.
-
-### Victoria
-
-- [ ] Revisar uso de fotografías y autorizaciones.
-- [ ] Separar contenido disponible y contenido restringido.
-- [ ] Preparar créditos de imágenes cuando corresponda.
-
-## Jueves 17
-
-### Diego y Victoria
-
-- [ ] Ejecutar revisión SEO, analítica, privacidad e idiomas.
-- [ ] Registrar defectos críticos.
-- [ ] Aprobar lista de correcciones para la semana 10.
-
-**Viernes 18:** feriado nacional; no se programan tareas.
-
-**Hito 9:** sitio técnicamente preparado para revisión final.
+**Vie 18:** feriado nacional.
 
 ---
 
-# Semana 10 — QA y publicación
+# Semana 10 — Reuniones y piloto
 
 **Fechas:** 21 al 25 de septiembre  
-**Resultado semanal:** Sitio publicado y medido.
+**Hito:** Oportunidades calificadas y piloto cotizable.
 
-## Lunes 21
-
-### Diego
-
-- [ ] Ejecutar pruebas móviles, escritorio y navegadores principales.
-- [ ] Ejecutar revisión de accesibilidad.
-- [ ] Revisar rendimiento.
-
-### Victoria
-
-- [ ] Revisar todos los textos visibles.
-- [ ] Revisar imágenes, edades, duraciones y capacidades.
-- [ ] Detectar errores de contenido.
-
-## Martes 22
-
-### Diego
-
-- [ ] Corregir defectos críticos.
-- [ ] Optimizar imágenes y carga.
-- [ ] Verificar formularios y correos.
-
-### Victoria
-
-- [ ] Cargar tres artículos adicionales.
-- [ ] Revisar enlaces y llamadas a la acción.
-- [ ] Aprobar el contenido de lanzamiento.
-
-## Miércoles 23
-
-### Diego
-
-- [ ] Configurar dominio y entorno de producción.
-- [ ] Verificar seguridad, HTTPS y copias de respaldo.
-- [ ] Preparar plan de reversión.
-
-### Victoria
-
-- [ ] Preparar anuncio de lanzamiento.
-- [ ] Preparar piezas de redes sociales.
-- [ ] Preparar correo a contactos existentes.
-
-## Jueves 24
-
-### Diego y Victoria
-
-- [ ] Ejecutar prueba final de aceptación.
-- [ ] Aprobar publicación.
-- [ ] Publicar sitio.
-
-## Viernes 25
-
-### Diego
-
-- [ ] Revisar errores y analítica de las primeras 24 horas.
-- [ ] Corregir incidentes.
-- [ ] Registrar línea base.
-
-### Victoria
-
-- [ ] Publicar anuncio.
-- [ ] Recopilar comentarios iniciales.
-- [ ] Registrar dudas frecuentes de usuarios.
-
-**Hito 10:** sitio en producción.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 21 | Hacer seguimiento y agendar reuniones. | Preparar material personalizado. | Agenda y materiales. |
+| Mar 22 | Preparar cotizaciones y condiciones. | Validar capacidad y calendario. | Cotizaciones factibles. |
+| Mié 23 | Registrar reuniones, decisiones y próximos pasos. | Presentar o ensayar casos. | Registro comercial. |
+| Jue 24 | Diseñar propuesta de piloto concreta. | Preparar ejecución, materiales e indicadores. | Piloto completo. |
+| Vie 25 | Priorizar oportunidades y actualizar proyección. | Confirmar factibilidad operacional. | Embudo calificado. |
 
 ---
 
-# Semana 11 — Prospección, lobby y marketplace
+# Semana 11 — Optimización web y conversión
 
 **Fechas:** 28 de septiembre al 2 de octubre  
-**Resultado semanal:** Campaña comercial activa y vitrina inicial definida.
+**Hito:** Sitio mejorado según datos reales.
 
-## Lunes 28
-
-### Diego
-
-- [ ] Crear base priorizada de SLEP, municipios, colegios y afterschools.
-- [ ] Definir contacto, cargo, canal y siguiente acción.
-- [ ] Seleccionar diez prospectos iniciales.
-
-### Victoria
-
-- [ ] Preparar versión final de presentaciones por público.
-- [ ] Preparar relato de casos y capacidades.
-- [ ] Ensayar presentación.
-
-## Martes 29
-
-### Diego
-
-- [ ] Redactar solicitudes de lobby para SLEP y municipios.
-- [ ] Redactar correos directos para privados.
-- [ ] Preparar registro de seguimiento.
-
-### Victoria
-
-- [ ] Adaptar presentación SLEP.
-- [ ] Adaptar presentación municipal.
-- [ ] Adaptar presentación para colegios y afterschools.
-
-## Miércoles 30
-
-### Diego
-
-- [ ] Enviar o ingresar las primeras solicitudes.
-- [ ] Registrar fechas y compromisos.
-- [ ] Revisar habilitación en Mercado Público.
-
-### Victoria
-
-- [ ] Preparar material que se enviará después de cada reunión.
-- [ ] Crear ficha de piloto de una página.
-- [ ] Preparar respuestas frecuentes.
-
-## Jueves 1
-
-### Diego
-
-- [ ] Definir productos físicos iniciales de marketplace.
-- [ ] Calcular precio, comisión, embalaje y logística.
-- [ ] Validar modalidad de venta de la guía digital.
-
-### Victoria
-
-- [ ] Definir contenido y experiencia de cada kit.
-- [ ] Preparar instrucciones y lista de materiales.
-- [ ] Crear contenido visual de publicación.
-
-## Viernes 2
-
-### Diego y Victoria
-
-- [ ] Revisar resultados comerciales de la semana.
-- [ ] Ajustar mensajes.
-- [ ] Aprobar publicación del primer producto o dejar bloqueo documentado.
-
-**Hito 11:** prospección activa y primer producto preparado.
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 28 | Analizar tráfico, formularios y clics. | Revisar preguntas y objeciones recibidas. | Diagnóstico de conversión. |
+| Mar 29 | Mejorar CTA y formularios. | Mejorar textos comerciales. | Landing optimizada. |
+| Mié 30 | Mejorar rendimiento, búsqueda y navegación. | Revisar experiencia editorial. | Correcciones técnicas. |
+| Jue 1 | Evaluar requisitos para publicidad sin activarla todavía. | Revisar contenido apto y protección de menores. | Checklist de monetización futura. |
+| Vie 2 | Medir cambios y documentar línea base. | Aprobar cambios visibles. | Versión optimizada. |
 
 ---
 
-# Semana 12 — Conversión y siguiente ciclo
+# Semana 12 — Cierre y siguiente ciclo
 
 **Fechas:** 5 al 9 de octubre  
-**Resultado semanal:** Primeras oportunidades calificadas y planificación basada en datos.
+**Hito:** Próximos 90 días decididos con datos.
 
-## Lunes 5
+| Fecha | Diego | Victoria | Entregable diario |
+|---|---|---|---|
+| Lun 5 | Consolidar indicadores comerciales y web. | Consolidar resultados operacionales y editoriales. | Informe base. |
+| Mar 6 | Comparar ingresos, margen y capacidad. | Priorizar nuevos talleres y contenidos. | Diagnóstico conjunto. |
+| Mié 7 | Proponer objetivos y presupuesto siguiente. | Proponer calendario de ejecución y contenidos. | Plan preliminar. |
+| Jue 8 | Preparar backlog y dependencias. | Confirmar recursos y capacidad. | Backlog priorizado. |
+| Vie 9 | Realizar retrospectiva y aprobar ciclo siguiente. | Participar en decisiones finales. | Roadmap de los siguientes 90 días. |
 
-### Diego
+## 4. Criterios de éxito al 9 de octubre
 
-- [ ] Hacer seguimiento a todas las solicitudes.
-- [ ] Clasificar prospectos por interés y probabilidad.
-- [ ] Agendar reuniones.
+- MVP web publicado al 31 de julio.
+- Landing, contacto y blog bilingües funcionando.
+- Al menos cinco talleres costados y publicados.
+- Cumpleaños estandarizados.
+- Tres niveles de feria definidos.
+- Propuesta y presentación SLEP.
+- Guía digital al menos al 50 % y con plan de cierre.
+- Primer producto de marketplace activo o bloqueo resuelto.
+- Diez prospectos contactados.
+- Analítica y Search Console con datos.
+- Decisiones del ciclo siguiente documentadas.
 
-### Victoria
+## 5. Fuera del MVP de las primeras dos semanas
 
-- [ ] Preparar material para reuniones confirmadas.
-- [ ] Personalizar ejemplos según público.
-- [ ] Ensayar respuestas.
-
-## Martes 6
-
-### Diego
-
-- [ ] Revisar tráfico, formularios y clics al marketplace.
-- [ ] Identificar páginas con problemas de conversión.
-- [ ] Crear lista de mejoras.
-
-### Victoria
-
-- [ ] Revisar preguntas recibidas.
-- [ ] Proponer mejoras de contenido.
-- [ ] Convertir una pregunta frecuente en artículo.
-
-## Miércoles 7
-
-### Diego
-
-- [ ] Revisar margen y capacidad frente a oportunidades reales.
-- [ ] Preparar cotizaciones.
-- [ ] Evitar comprometer fechas o capacidades no disponibles.
-
-### Victoria
-
-- [ ] Validar factibilidad operacional de cada oportunidad.
-- [ ] Preparar calendario tentativo.
-- [ ] Confirmar materiales y personal.
-
-## Jueves 8
-
-### Diego
-
-- [ ] Consolidar indicadores del ciclo.
-- [ ] Comparar resultados con objetivos.
-- [ ] Preparar propuesta del siguiente ciclo.
-
-### Victoria
-
-- [ ] Consolidar aprendizajes operacionales y editoriales.
-- [ ] Priorizar nuevos talleres y contenidos.
-- [ ] Identificar material faltante.
-
-## Viernes 9
-
-### Diego y Victoria
-
-- [ ] Realizar retrospectiva de 60 minutos.
-- [ ] Decidir qué mantener, corregir y eliminar.
-- [ ] Aprobar prioridades de los siguientes 90 días.
-- [ ] Definir si corresponde avanzar con publicidad.
-
-**Hito 12:** primer ciclo cerrado con decisiones basadas en datos.
-
----
-
-# 5. Criterios de éxito del ciclo
-
-Al 9 de octubre deben existir:
-
-- Cinco talleres completamente costados y empaquetados.
-- Un producto de cumpleaños estandarizado con cuatro opciones.
-- Tres niveles de feria científica.
-- Una guía digital estructurada.
-- Una propuesta y presentación SLEP.
-- Versiones comerciales para municipios, colegios y afterschools.
-- Sitio bilingüe publicado.
-- Blog con al menos seis artículos en español y uno en inglés.
-- Formularios y analítica funcionando.
-- Diez prospectos priorizados y contactados.
-- Solicitudes institucionales ingresadas.
-- Un producto de marketplace publicado o con bloqueo formal resuelto.
-- Un tablero con indicadores y siguiente ciclo aprobado.
-
-## 6. Lo que queda fuera de este ciclo
-
-- Automatizaciones complejas de marketing.
-- Aplicación móvil.
-- Plataforma propia de ecommerce con logística.
-- Publicidad masiva pagada.
-- Contratación de equipo permanente.
-- Producción de una biblioteca extensa de cursos.
-- Expansión territorial fuera de la capacidad operacional.
-- Activación de publicidad de Google antes de validar contenido, tráfico y cumplimiento.
+- Precios definitivos de todos los talleres.
+- Ecommerce propio.
+- Automatizaciones complejas.
+- Google Ads o AdSense activos.
+- Biblioteca extensa de artículos.
+- Sistema avanzado de reservas.
+- Área privada de usuarios.
