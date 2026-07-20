@@ -20,10 +20,10 @@ function BrandLogo() {
 
 export function LandingPage({ locale }: { locale: Locale }) {
   const t = content[locale];
-  const sectionIds =
+  const pageIds =
     locale === "es"
-      ? ["experiencias", "como-funciona", "blog", "nosotros"]
-      : ["experiences", "how-it-works", "blog", "about"];
+      ? { audiences: "publicos", experiences: "experiencias", process: "como-funciona", about: "nosotros" }
+      : { audiences: "audiences", experiences: "experiences", process: "how-it-works", about: "about" };
   const contactId = locale === "es" ? "contacto" : "contact";
   const artNotes =
     locale === "es"
@@ -38,8 +38,8 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <BrandLogo />
           </a>
           <nav className="desktop-nav" aria-label={locale === "es" ? "Navegación principal" : "Primary navigation"}>
-            {t.nav.map(([label], index) => (
-              <a href={`#${sectionIds[index]}`} key={label}>
+            {t.nav.map(([label, href]) => (
+              <a href={href} key={label}>
                 {label}
               </a>
             ))}
@@ -64,7 +64,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <p className="hero-intro">{t.intro}</p>
             <div className="hero-actions">
               <a className="button" href={`#${contactId}`}>{t.primaryCta}<span aria-hidden="true">→</span></a>
-              <a className="text-link" href={`#${sectionIds[3]}`}>{t.secondaryCta}<span aria-hidden="true">↘</span></a>
+              <a className="text-link" href={`#${pageIds.about}`}>{t.secondaryCta}<span aria-hidden="true">↘</span></a>
             </div>
             <div className="proof-row">
               {t.proof.map(([value, label]) => (
@@ -100,7 +100,31 @@ export function LandingPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="section experiences" id={sectionIds[0]}>
+      <section className="section audiences-section" id={pageIds.audiences} aria-labelledby={`${pageIds.audiences}-title`}>
+        <div className="shell">
+          <div className="section-heading audience-heading">
+            <div>
+              <p className="eyebrow">{t.audiencesEyebrow}</p>
+              <h2 id={`${pageIds.audiences}-title`}>{t.audiencesTitle}</h2>
+            </div>
+            <p>{t.audiencesIntro}</p>
+          </div>
+          <div className="audience-grid">
+            {t.audiences.map((item, index) => (
+              <article className={`audience-card audience-tone-${index + 1}`} key={item.title}>
+                <div className="audience-icon" aria-hidden="true">
+                  {index === 0 ? "▦" : index === 1 ? "⌂" : "◎"}
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <a href={`#${contactId}`}>{t.audiencesCta}<span aria-hidden="true">→</span></a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section experiences" id={pageIds.experiences}>
         <div className="shell">
           <div className="section-heading">
             <div>
@@ -125,7 +149,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="section process-section" id={sectionIds[1]}>
+      <section className="section process-section" id={pageIds.process}>
         <div className="shell process-layout">
           <div className="process-heading">
             <p className="eyebrow">{t.processEyebrow}</p>
@@ -173,7 +197,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="section about-section" id={sectionIds[3]}>
+      <section className="section about-section" id={pageIds.about}>
         <div className="shell about-grid">
           <div className="about-art" aria-hidden="true">
             <div className="art-circle"><FlaskMark /></div>

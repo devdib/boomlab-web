@@ -101,6 +101,19 @@ button, input, textarea { font: inherit; }
 .section-heading { display: grid; grid-template-columns: 1.25fr .75fr; gap: 80px; align-items: end; margin-bottom: 48px; }
 .section-heading h2, .process-heading h2, .about-copy h2 { font-size: clamp(2.4rem, 4.4vw, 4.4rem); }
 .section-heading > p { margin: 0; color: var(--ink-soft); line-height: 1.75; }
+.audiences-section { padding-bottom: 82px; background: white; }
+.audience-heading { margin-bottom: 38px; }
+.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.audience-card { position: relative; min-height: 285px; padding: 28px; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 30px; background: var(--cream); box-shadow: 0 18px 40px rgba(18,50,74,.07); }
+.audience-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 6px; background: var(--orange); }
+.audience-tone-2::before { background: var(--teal); }
+.audience-tone-3::before { background: var(--yellow); }
+.audience-icon { width: 60px; height: 60px; display: grid; place-items: center; border-radius: 19px; background: white; color: var(--ink); font-size: 2rem; font-weight: 850; box-shadow: 0 14px 30px rgba(18,50,74,.09); }
+.audience-card h3 { margin: 27px 0 12px; font-size: 1.38rem; line-height: 1.08; letter-spacing: -.035em; }
+.audience-card p { margin: 0; color: var(--ink-soft); line-height: 1.62; }
+.audience-card a { margin-top: auto; padding-top: 22px; display: inline-flex; align-items: center; gap: 10px; color: var(--orange-dark); font-size: .76rem; font-weight: 820; text-transform: uppercase; letter-spacing: .055em; }
+.audience-card a span { font-size: 1rem; transition: transform .2s ease; }
+.audience-card a:hover span { transform: translateX(4px); }
 .experiences { background: white; }
 .experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .experience-card { position: relative; min-height: 405px; padding: 28px; display: flex; flex-direction: column; border-radius: 32px; overflow: hidden; }
@@ -172,7 +185,8 @@ button, input, textarea { font: inherit; }
   .hero-grid, .section-heading, .process-layout, .about-grid, .faq-grid { grid-template-columns: 1fr; }
   .hero-grid { gap: 25px; }
   .hero-visual { min-height: 650px; }
-  .experience-grid, .post-grid { grid-template-columns: 1fr 1fr; }
+  .audience-grid, .experience-grid, .post-grid { grid-template-columns: 1fr 1fr; }
+  .audience-card:last-child { grid-column: span 2; }
   .experience-card:last-child, .post-card:last-child { grid-column: span 2; }
   .section-heading, .about-grid, .faq-grid { gap: 38px; }
   .process-layout { gap: 55px; }
@@ -209,7 +223,9 @@ button, input, textarea { font: inherit; }
   .process-list article:hover { transform: none; }
   .process-number { font-size: 3.35rem; }
   .process-symbol { width: 46px; height: 46px; border-radius: 14px; font-size: 1.5rem; }
-  .experience-grid, .post-grid { grid-template-columns: 1fr; }
+  .audience-grid, .experience-grid, .post-grid { grid-template-columns: 1fr; }
+  .audience-card:last-child { grid-column: auto; }
+  .audience-card { min-height: 270px; }
   .experience-card:last-child, .post-card:last-child { grid-column: auto; }
   .experience-card { min-height: 360px; }
   .about-art { min-height: 360px; }

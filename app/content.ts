@@ -14,6 +14,7 @@ export const content = {
     alternateHref: "/en",
     location: "Santiago · Concepción · Ciencia móvil",
     nav: [
+      ["Para quiénes", "#publicos"],
       ["Experiencias", "#experiencias"],
       ["Cómo funciona", "#como-funciona"],
       ["Blog", "#blog"],
@@ -40,6 +41,25 @@ export const content = {
       "Niña con antiparras de seguridad junto a un volcán de espuma en un taller científico de Boom! Lab.",
     heroImageAltSecondary:
       "Niñas y niños observan la reacción de un volcán guiados por Boom! Lab.",
+    audiencesEyebrow: "Ciencia que se adapta al contexto",
+    audiencesTitle: "Una experiencia para cada comunidad que quiere aprender haciendo.",
+    audiencesIntro:
+      "Trabajamos con adultos responsables e instituciones para diseñar experiencias adecuadas a cada grupo, espacio y propósito.",
+    audiencesCta: "Consultar formato",
+    audiences: [
+      {
+        title: "Colegios y equipos educativos",
+        body: "Talleres, ciclos, jornadas STEM y ferias para colegios, escuelas y programas afterschool.",
+      },
+      {
+        title: "Familias y celebraciones",
+        body: "Cumpleaños científicos y experiencias participativas para aprender, jugar y celebrar de otra manera.",
+      },
+      {
+        title: "SLEP, municipios y comunidades",
+        body: "Programas móviles, pilotos y jornadas para acercar experiencias científicas a distintos territorios.",
+      },
+    ],
     experiencesEyebrow: "Experiencias a la medida",
     experiencesTitle: "Distintos formatos, la misma curiosidad encendida.",
     experiencesIntro:
@@ -110,6 +130,7 @@ export const content = {
     alternateHref: "/es",
     location: "Santiago · Concepción · Mobile science",
     nav: [
+      ["Who it’s for", "#audiences"],
       ["Experiences", "#experiences"],
       ["How it works", "#how-it-works"],
       ["Blog", "#blog"],
@@ -136,6 +157,25 @@ export const content = {
       "A child wearing safety goggles beside a foaming volcano during a Boom! Lab science workshop.",
     heroImageAltSecondary:
       "Children observe a volcano reaction guided by Boom! Lab.",
+    audiencesEyebrow: "Science shaped around each context",
+    audiencesTitle: "An experience for every community that wants to learn by doing.",
+    audiencesIntro:
+      "We work with responsible adults and institutions to shape experiences around each group, setting and purpose.",
+    audiencesCta: "Ask about a format",
+    audiences: [
+      {
+        title: "Schools and education teams",
+        body: "Workshops, programs, STEM days and fairs for schools and after-school learning spaces.",
+      },
+      {
+        title: "Families and celebrations",
+        body: "Science birthdays and participatory experiences that bring learning, play and celebration together.",
+      },
+      {
+        title: "Municipalities and communities",
+        body: "Mobile programs, pilots and science days designed to reach different communities and territories.",
+      },
+    ],
     experiencesEyebrow: "Experiences made to fit",
     experiencesTitle: "Different formats. The same curiosity switched on.",
     experiencesIntro:
