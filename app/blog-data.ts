@@ -5,6 +5,9 @@ export type BlogSection = {
   paragraphs: readonly string[];
   bullets?: readonly string[];
   callout?: string;
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
   sources?: readonly { label: string; href: string }[];
 };
 
@@ -16,6 +19,8 @@ export type BlogPost = {
   readTime: string;
   date: string;
   updatedDate: string;
+  publishedIso?: string;
+  updatedIso?: string;
   icon: string;
   tone: "orange" | "teal" | "yellow";
   image: string;
@@ -531,6 +536,229 @@ export const blogPosts: Record<Locale, readonly BlogPost[]> = {
             "Al finalizar, limpia la lente con un paño suave, revisa que no existan daños y guarda cada lupa en una funda o caja separada. Cuidar la herramienta también forma parte del trabajo científico.",
             "Durante su uso, la lente no se apoya sobre los ojos, la boca ni el rostro. La lupa se transporta por el mango y se devuelve a su lugar inmediatamente después de ocuparla, de modo que no quede expuesta a la luz solar ni pueda caer o dañarse.",
           ],
+        },
+      ],
+    },
+    {
+      ...sharedAuthor.es,
+      reviewer: "Victoria Del Real",
+      reviewerLabel: "Revisión científica y pedagógica",
+      reviewerRole: "Profesora de Química y Biología",
+      slug: "proyectos-feria-cientifica-escolar",
+      title: "20 proyectos para una feria científica escolar",
+      excerpt: "Veinte ideas fáciles de preparar para investigar con materiales sencillos, hacer predicciones, comparar resultados y explicar lo observado.",
+      category: "Ferias científicas",
+      readTime: "18 min",
+      date: "19 de agosto de 2026",
+      updatedDate: "19 de agosto de 2026",
+      publishedIso: "2026-08-19",
+      updatedIso: "2026-08-19",
+      icon: "⚗",
+      tone: "orange",
+      image: "/images/blog/proyectos-feria-cientifica-escolar-boomlab.webp",
+      imageAlt: "Niñas y niños presentan proyectos para una feria científica escolar junto a una educadora.",
+      imageCaption: "Ilustración editorial original de Boom! Lab sobre proyectos escolares basados en preguntas, predicciones y experimentación.",
+      takeaways: [
+        "Cambiar una sola variable permite comparar los resultados de manera más confiable.",
+        "Repetir, medir y registrar convierte una actividad sencilla en una investigación.",
+        "Un resultado inesperado no es un error: puede abrir una nueva pregunta científica.",
+      ],
+      content: [
+        {
+          heading: "Antes de comenzar: ¿cómo hacer una prueba justa?",
+          paragraphs: [
+            "Preparar una feria científica no exige materiales difíciles ni un montaje complicado. Muchas buenas investigaciones nacen de preguntas simples: ¿por qué algunos objetos flotan?, ¿qué hace que un puente de papel resista más peso? o ¿cómo podemos evitar que el hielo se derrita tan rápido?",
+            "Las siguientes propuestas están pensadas para niñas y niños de educación básica. Antes de revelar el resultado esperado, conviene invitarlos a anticipar qué ocurrirá y explicar por qué. Después podrán comparar esa idea con lo que realmente observaron.",
+            "No hace falta seguir un método complicado. Para comparar resultados de manera confiable, basta con cambiar solo un elemento a la vez, mantener iguales las demás condiciones, repetir cada prueba al menos tres veces y registrar lo observado.",
+          ],
+          callout: "Los resultados inesperados también son parte de la ciencia. En lugar de ocultarlos, vale la pena preguntarse qué pudo haber ocurrido y cómo se podría comprobar.",
+        },
+        {
+          heading: "1. ¿Qué objetos flotan y cuáles se hunden?",
+          paragraphs: [
+            "Reúne un recipiente con agua, una piedra, un corcho, una tapa plástica, una cuchara, un trozo de madera y papel aluminio. Antes de probar, pregunta: “¿El objeto más grande siempre se hunde?”. Luego separen los objetos según crean que flotarán o se hundirán y pónganlos en el agua uno por uno.",
+            "Para profundizar, usen dos trozos iguales de papel aluminio: formen una bola compacta con uno y un pequeño bote con el otro. Registren el objeto, la predicción y el resultado observado.",
+            "El tamaño no basta para predecir el resultado. Influyen la densidad promedio, la forma y la cantidad de agua desplazada. Un bote de aluminio puede flotar aunque una bola muy compacta del mismo material se hunda.",
+          ],
+          callout: "Aprendizaje científico: densidad, empuje y flotación.",
+        },
+        {
+          heading: "2. ¿Qué forma hace más resistente un puente de papel?",
+          paragraphs: [
+            "Necesitarán hojas iguales, dos libros y monedas del mismo tipo. Apoyen cada hoja entre los libros y prueben distintas formas: plana, curvada, doblada o en acordeón. Agreguen monedas una a una, siempre en el mismo lugar, hasta que el puente se deforme.",
+            "Anoten cuántas monedas soporta cada diseño y repitan la prueba. Una hoja plana suele resistir poco peso, mientras que los pliegues y las formas tridimensionales aumentan su rigidez y distribuyen mejor la carga.",
+          ],
+          image: "/images/blog/puente-papel-feria-cientifica.webp",
+          imageAlt: "Niñas y niños prueban cuántas monedas soporta un puente de papel plegado.",
+          imageCaption: "Los pliegues aumentan la rigidez del papel y permiten distribuir mejor el peso de las monedas.",
+          callout: "Aprendizaje científico: geometría, estructuras y distribución de cargas.",
+        },
+        {
+          heading: "3. ¿Qué material protege mejor un cubo de hielo?",
+          paragraphs: [
+            "Envuelvan cubos de hielo similares con papel, cartón, algodón, tela y papel aluminio. Dejen uno sin envolver como control y mantengan todos en el mismo lugar durante el mismo tiempo. Pueden comparar el tiempo de derretimiento, el tamaño restante o la cantidad de agua obtenida.",
+            "Los materiales que atrapan aire, como el algodón o algunas telas, suelen retardar mejor la transferencia de calor. El grosor, la humedad y la forma de envolver también pueden cambiar el resultado.",
+          ],
+          callout: "Aprendizaje científico: aislamiento y transferencia de calor.",
+        },
+        {
+          heading: "4. ¿Todos los metales son atraídos por un imán?",
+          paragraphs: [
+            "Prueben un imán con objetos de acero, aluminio, cobre, plástico y madera. Antes de acercarlo, identifiquen el material y hagan una predicción. No todos los metales presentan una atracción perceptible: el hierro y muchos aceros son fuertemente atraídos, mientras el aluminio y el cobre no responden de la misma manera ante un imán común.",
+            "Mantengan los imanes pequeños fuera del alcance de menores que puedan tragarlos y lejos de dispositivos médicos o electrónicos sensibles.",
+          ],
+          callout: "Aprendizaje científico: magnetismo y propiedades de los materiales.",
+        },
+        {
+          heading: "5. ¿Qué avión de papel vuela más lejos?",
+          paragraphs: [
+            "Construyan tres modelos con hojas del mismo tamaño. Láncenlos desde una línea común, con la misma persona y de una manera lo más parecida posible. Hagan al menos tres lanzamientos por diseño y calculen el promedio de las distancias.",
+            "Los modelos se comportarán de forma distinta. Uno puede llegar más lejos y otro permanecer más tiempo en el aire. Repetir la prueba ayuda a distinguir el efecto del diseño de las variaciones del lanzamiento.",
+          ],
+          callout: "Aprendizaje científico: aerodinámica, gravedad y resistencia del aire.",
+        },
+        {
+          heading: "6. ¿Qué tipo de papel absorbe más agua?",
+          paragraphs: [
+            "Corten trozos iguales de papel higiénico, papel de cocina, periódico y cartulina. Introduzcan solo el extremo inferior de cada uno en agua coloreada, a la misma profundidad y durante el mismo tiempo. Comparen la altura alcanzada por el agua o la cantidad absorbida.",
+            "Los papeles tienen fibras, espacios y tratamientos diferentes. Los más porosos suelen absorber más, mientras el agua asciende por los pequeños espacios entre las fibras mediante capilaridad.",
+          ],
+          callout: "Aprendizaje científico: absorción, porosidad y capilaridad.",
+        },
+        {
+          heading: "7. ¿Podemos hacer que un huevo flote?",
+          paragraphs: [
+            "Preparen recipientes con igual cantidad de agua y agreguen distintas cantidades de sal. Revuelvan hasta disolverla y coloquen cuidadosamente un huevo en cada uno. Registren la cantidad de sal y la posición del huevo.",
+            "Al disolver sal aumenta la densidad del agua. Cuando el líquido se vuelve suficientemente denso respecto del huevo, el empuje permite que este se eleve y flote. Laven las manos y superficies después de manipular huevos crudos y no consuman los materiales.",
+          ],
+          image: "/images/blog/experimento-huevo-flota-agua-salada.webp",
+          imageAlt: "Huevo flotando en un vaso con agua salada durante un experimento científico infantil.",
+          imageCaption: "Al agregar sal aumenta la densidad del agua y el huevo puede comenzar a flotar.",
+          callout: "Aprendizaje científico: densidad y empuje.",
+        },
+        {
+          heading: "8. ¿En qué agua se disuelve más rápido el azúcar?",
+          paragraphs: [
+            "Usen vasos iguales con agua fría y tibia, el mismo volumen de líquido y la misma cantidad de azúcar. Mantengan también igual la forma de agitar. Cronometren cuánto tarda en dejar de verse azúcar en el fondo.",
+            "En condiciones habituales, el azúcar se disuelve más rápido en agua tibia porque sus partículas se mueven con mayor rapidez. La agitación y el tamaño de los cristales también influyen. Utilicen agua tibia, nunca hirviendo, y trabajen con supervisión adulta.",
+          ],
+          callout: "Aprendizaje científico: temperatura y velocidad de disolución.",
+        },
+        {
+          heading: "9. ¿Qué superficie detiene antes un auto de juguete?",
+          paragraphs: [
+            "Suelten el mismo auto desde una marca fija de una rampa y, sin empujarlo, déjenlo avanzar sobre cartón, tela, madera, goma y alfombra. Midan la distancia desde el final de la rampa y repitan tres veces por superficie.",
+            "El auto suele recorrer menos distancia sobre superficies que ofrecen mayor fricción o resistencia al rodamiento.",
+          ],
+          callout: "Aprendizaje científico: fricción, energía y movimiento.",
+        },
+        {
+          heading: "10. ¿Dónde se evapora más rápido el agua?",
+          paragraphs: [
+            "Coloquen el mismo volumen de agua en recipientes iguales y déjenlos en distintos lugares: al sol, a la sombra y en un sitio ventilado. Para estudiar una variable con mayor precisión, comparen solo dos condiciones a la vez. Marquen el nivel o midan la masa a la misma hora cada día.",
+            "Una mayor temperatura y el movimiento de aire suelen acelerar la evaporación. El agua no desaparece: pasa al aire como vapor.",
+          ],
+          callout: "Aprendizaje científico: evaporación y cambios de estado.",
+        },
+        {
+          heading: "11. ¿Una planta puede crecer sin luz?",
+          paragraphs: [
+            "Planten semillas similares y mantengan iguales el agua, el recipiente, el suelo y la temperatura. Cambien únicamente la disponibilidad de luz. Registren altura, número de hojas, color y fotografías en fechas definidas.",
+            "Una semilla puede germinar inicialmente usando sus reservas, pero sin luz suficiente la planta suele desarrollar tallos alargados, débiles y pálidos. Con iluminación adecuada puede producir clorofila y crecer de manera más saludable.",
+          ],
+          callout: "Aprendizaje científico: germinación, crecimiento vegetal y fotosíntesis.",
+        },
+        {
+          heading: "12. ¿Qué tipo de suelo resiste mejor la lluvia?",
+          paragraphs: [
+            "Formen pendientes con igual inclinación y cantidad de distintos suelos. Viertan el mismo volumen de agua desde la misma altura y velocidad. Comparen el material arrastrado, la turbiedad y los pequeños canales formados.",
+            "Los suelos sueltos y sin protección suelen perder más material, aunque la respuesta también depende del tamaño de sus partículas, la compactación, la humedad inicial y la materia orgánica.",
+          ],
+          callout: "Aprendizaje científico: erosión y comportamiento del suelo.",
+        },
+        {
+          heading: "13. ¿Qué mezcla produce burbujas más duraderas?",
+          paragraphs: [
+            "Preparen mezclas con distintas proporciones de agua y lavalozas, manteniendo igual el volumen total. Formen burbujas con el mismo aro y en un lugar sin corrientes de aire. Midan la duración de varias burbujas y calculen el promedio.",
+            "El detergente reduce la tensión superficial y permite formar una película flexible, pero aumentar su cantidad indefinidamente no garantiza burbujas mejores. La humedad, el viento y la técnica también afectan el resultado.",
+          ],
+          callout: "Aprendizaje científico: tensión superficial y formulación de mezclas.",
+        },
+        {
+          heading: "14. ¿Cómo podemos hacer que un péndulo oscile más lento?",
+          paragraphs: [
+            "Prueben distintas longitudes de hilo utilizando siempre la misma masa y un ángulo inicial pequeño y similar. Cronometren diez oscilaciones y dividan el resultado por diez para obtener el período aproximado de una.",
+            "Los péndulos más largos tardan más en completar una oscilación. Para ángulos pequeños, cambiar la masa tiene muy poco efecto sobre el período.",
+          ],
+          callout: "Aprendizaje científico: movimiento periódico, medición del tiempo y gravedad.",
+        },
+        {
+          heading: "15. ¿Podemos limpiar agua con piedras y arena?",
+          paragraphs: [
+            "Construyan filtros con grava, arena, algodón y filtro de café dentro de botellas cortadas por una persona adulta. Viertan el mismo volumen de agua mezclada con tierra y comparen la claridad y el tiempo de filtración.",
+            "Combinar capas con distintos tamaños de espacios suele retener más partículas visibles que utilizar una sola. Sin embargo, aunque el agua se vea limpia, no es potable: no debe beberse ni usarse para preparar alimentos.",
+          ],
+          callout: "Aprendizaje científico: filtración y tratamiento del agua.",
+        },
+        {
+          heading: "16. ¿Qué material mantiene mejor el agua tibia?",
+          paragraphs: [
+            "Agreguen el mismo volumen de agua a la misma temperatura inicial en recipientes iguales. Envuélvanlos con algodón, tela, papel, cartón o espuma y dejen uno sin envolver como control. Midan la temperatura cada cinco minutos.",
+            "Los materiales que atrapan aire suelen disminuir la rapidez con que el agua intercambia calor con el ambiente. El resultado también dependerá del espesor y de cuánto cubra cada material.",
+          ],
+          callout: "Aprendizaje científico: aislamiento térmico y transferencia de energía.",
+        },
+        {
+          heading: "17. ¿El color influye en cuánto se calienta una superficie?",
+          paragraphs: [
+            "Recubran dos recipientes iguales, uno de negro y otro de blanco. Agreguen la misma cantidad de agua a igual temperatura inicial y expónganlos juntos bajo una fuente de luz estable. Registren la temperatura a intervalos regulares.",
+            "En condiciones comparables, las superficies oscuras suelen absorber una mayor proporción de la radiación y pueden calentarse más que las claras. Las nubes, sombras y el viento pueden alterar una prueba al aire libre.",
+          ],
+          callout: "Aprendizaje científico: absorción y reflexión de radiación.",
+        },
+        {
+          heading: "18. ¿Las plantas ayudan a proteger el suelo?",
+          paragraphs: [
+            "Preparen dos bandejas inclinadas: una con suelo descubierto y otra con vegetación o una cobertura similar. Apliquen la misma cantidad de agua de la misma forma y comparen el material desplazado, la turbiedad y los canales formados.",
+            "La vegetación reduce el impacto directo de las gotas y la velocidad del agua. Las raíces también pueden ayudar a mantener las partículas unidas, por lo que generalmente se pierde menos suelo.",
+          ],
+          image: "/images/blog/experimento-erosion-suelo-vegetacion.webp",
+          imageAlt: "Estudiantes comparan la erosión de suelo descubierto y suelo cubierto con vegetación.",
+          imageCaption: "La cobertura vegetal reduce el impacto directo del agua y ayuda a evitar que el suelo sea arrastrado.",
+          callout: "Aprendizaje científico: erosión, escorrentía y protección del suelo.",
+        },
+        {
+          heading: "19. ¿Qué material reduce mejor el sonido?",
+          paragraphs: [
+            "Mantengan sin cambios el volumen de una fuente sonora, las distancias y las posiciones. Coloquen cartón, tela, espuma o madera como barrera y hagan varias mediciones en un ambiente silencioso. Una aplicación puede servir para comparar, aunque no reemplaza un sonómetro calibrado.",
+            "El comportamiento depende del grosor, la densidad, la porosidad y el montaje. Los materiales blandos y porosos pueden absorber parte del sonido, mientras una barrera pesada y sin aberturas puede bloquear mejor su transmisión. Utilicen siempre un volumen moderado.",
+          ],
+          callout: "Aprendizaje científico: sonido, ondas, absorción y aislamiento acústico.",
+        },
+        {
+          heading: "20. ¿Cómo cambian las cantidades la reacción entre bicarbonato y vinagre?",
+          paragraphs: [
+            "Mantengan constante uno de los ingredientes y cambien solo el otro. Por ejemplo, usen la misma cantidad de bicarbonato con diferentes volúmenes de vinagre y comparen la duración o altura de la espuma.",
+            "Modificar las cantidades puede cambiar la intensidad y la duración. Sin embargo, llega un punto en que agregar más de un ingrediente ya no aumenta el producto, porque el otro se agota primero. Usen recipientes abiertos, protejan los ojos y nunca ingieran la mezcla.",
+          ],
+          callout: "Aprendizaje científico: reacciones químicas, dióxido de carbono y reactivo limitante.",
+        },
+        {
+          heading: "¿Cómo presentar el proyecto en una feria científica?",
+          paragraphs: [
+            "Al preparar el puesto o la cartulina, lo importante es que se entienda el camino recorrido. Pueden organizarlo en seis partes: pregunta, hipótesis, variables, método, resultados y conclusión.",
+            "Las fotografías, tablas y gráficos ayudan a mostrar el proceso. No es necesario que la hipótesis sea correcta: un resultado distinto de lo esperado puede dar origen a una explicación o a una nueva pregunta.",
+            "Una buena pregunta transforma una actividad en investigación. No es lo mismo pedir “hagan un avión de papel” que proponer “tenemos tres diseños y queremos descubrir cuál recorre una mayor distancia; ¿cómo podríamos comprobarlo de manera justa?”.",
+          ],
+          bullets: [
+            "Pregunta: ¿qué queríamos descubrir?",
+            "Hipótesis: ¿qué creíamos que ocurriría y por qué?",
+            "Variables: ¿qué cambiamos y qué mantuvimos igual?",
+            "Método: ¿cómo realizamos la prueba?",
+            "Resultados: ¿qué medimos u observamos?",
+            "Conclusión: ¿qué aprendimos y qué haríamos diferente?",
+          ],
+          callout: "Preguntar → predecir → experimentar → observar → comparar → explicar.",
         },
       ],
     },

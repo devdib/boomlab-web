@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: `/es/blog/${post.slug}`,
       languages: translation ? { "es-CL": `/es/blog/${post.slug}`, en: `/en/blog/${translation.slug}`, "x-default": `/es/blog/${post.slug}` } : undefined,
     },
-    openGraph: { title: post.title, description: post.excerpt, type: "article", url: `${siteUrl}/es/blog/${post.slug}`, siteName: "Boom! Lab", locale: "es_CL", alternateLocale: ["en_US"], publishedTime: "2026-07-20", modifiedTime: "2026-07-20", images: [{ url: post.image, alt: post.imageAlt }] },
+    openGraph: { title: post.title, description: post.excerpt, type: "article", url: `${siteUrl}/es/blog/${post.slug}`, siteName: "Boom! Lab", locale: "es_CL", alternateLocale: ["en_US"], publishedTime: post.publishedIso ?? "2026-07-20", modifiedTime: post.updatedIso ?? "2026-07-20", images: [{ url: post.image, alt: post.imageAlt }] },
     twitter: { card: "summary_large_image", title: post.title, description: post.excerpt, images: [post.image] },
   } : {};
 }

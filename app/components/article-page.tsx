@@ -44,8 +44,8 @@ export function ArticlePage({ locale, post }: { locale: Locale; post: BlogPost }
     headline: post.title,
     description: post.excerpt,
     image: `${siteUrl}${post.image}`,
-    datePublished: "2026-07-20",
-    dateModified: "2026-07-20",
+    datePublished: post.publishedIso ?? "2026-07-20",
+    dateModified: post.updatedIso ?? "2026-07-20",
     inLanguage: locale === "es" ? "es-CL" : "en",
     mainEntityOfPage: articleUrl,
     author: { "@type": "Organization", name: post.author },
@@ -101,6 +101,13 @@ export function ArticlePage({ locale, post }: { locale: Locale; post: BlogPost }
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 {section.bullets && <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}
                 {section.callout && <blockquote>{section.callout}</blockquote>}
+                {section.image && (
+                  <figure className="article-inline-figure">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={section.image} alt={section.imageAlt ?? ""} width="1536" height="1024" loading="lazy" />
+                    {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
+                  </figure>
+                )}
                 {section.sources && (
                   <div className="article-sources" aria-label={locale === "es" ? "Fuentes de esta sección" : "Sources for this section"}>
                     <strong>{locale === "es" ? "Investigaciones citadas" : "Research cited"}</strong>
