@@ -8,8 +8,8 @@ export function LandingPage({ locale }: { locale: Locale }) {
   const t = content[locale];
   const pageIds =
     locale === "es"
-      ? { audiences: "publicos", experiences: "experiencias", process: "como-funciona", about: "nosotros" }
-      : { audiences: "audiences", experiences: "experiences", process: "how-it-works", about: "about" };
+      ? { audiences: "publicos", experiences: "experiencias", process: "como-funciona", collaborate: "colabora", about: "nosotros" }
+      : { audiences: "audiences", experiences: "experiences", process: "how-it-works", collaborate: "collaborate", about: "about" };
   const contactId = locale === "es" ? "contacto" : "contact";
   const contactHref = locale === "es" ? "/es/contacto" : "/en/contact";
   const blogHref = `/${locale}/blog`;
@@ -164,6 +164,31 @@ export function LandingPage({ locale }: { locale: Locale }) {
                 <div className="process-step-copy"><h3>{title}</h3><p>{body}</p></div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section collaborate-section" id={pageIds.collaborate} aria-labelledby={`${pageIds.collaborate}-title`}>
+        <div className="shell">
+          <div className="section-heading collaborate-heading">
+            <div>
+              <p className="eyebrow">{t.collaborateEyebrow}</p>
+              <h2 id={`${pageIds.collaborate}-title`}>{t.collaborateTitle}</h2>
+            </div>
+            <p>{t.collaborateIntro}</p>
+          </div>
+          <div className="collaborate-grid">
+            {t.collaborateBenefits.map((item, index) => (
+              <article className={`collaborate-card collaborate-card-${index + 1}`} key={item.title}>
+                <span className="collaborate-icon" aria-hidden="true">{item.icon}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="collaborate-action">
+            <p>{t.collaborateNote}</p>
+            <a className="button" href={contactHref}>{t.collaborateCta}<span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>

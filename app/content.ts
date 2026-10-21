@@ -18,6 +18,7 @@ export const content = {
       ["Para quiénes", "#publicos"],
       ["Experiencias", "#experiencias"],
       ["Cómo funciona", "#como-funciona"],
+      ["Colabora", "#colabora"],
       ["Blog", "#blog"],
       ["Nosotros", "#nosotros"],
     ],
@@ -95,6 +96,29 @@ export const content = {
       ["02", "Diseñamos la experiencia", "Seleccionamos el formato y ajustamos cada detalle."],
       ["03", "Llevamos el laboratorio", "Montamos, guiamos y dejamos la curiosidad trabajando."],
     ],
+    collaborateEyebrow: "Colabora con Boom! Lab",
+    collaborateTitle: "Hagamos que más niñas y niños se encuentren con la ciencia.",
+    collaborateIntro:
+      "Buscamos marcas, fundaciones e instituciones que quieran transformar su apoyo en experiencias científicas cercanas, memorables y con propósito educativo.",
+    collaborateBenefits: [
+      {
+        icon: "✦",
+        title: "Auspicia una experiencia",
+        body: "Financia talleres, jornadas o materiales para una comunidad, establecimiento o territorio que quieras activar.",
+      },
+      {
+        icon: "◎",
+        title: "Conecta con propósito",
+        body: "Vincula tu marca con aprendizaje activo, curiosidad y oportunidades reales para niñas y niños.",
+      },
+      {
+        icon: "↗",
+        title: "Recibe resultados claros",
+        body: "Definimos una propuesta a medida con alcance, registro de la actividad y una devolución acorde a la colaboración.",
+      },
+    ],
+    collaborateCta: "Proponer una colaboración",
+    collaborateNote: "Cada alianza se diseña según el objetivo, la comunidad y el alcance del proyecto.",
     blogEyebrow: "Ideas para seguir descubriendo",
     blogTitle: "Ciencia que continúa después del taller.",
     blogIntro:
@@ -137,6 +161,7 @@ export const content = {
       ["Who it’s for", "#audiences"],
       ["Experiences", "#experiences"],
       ["How it works", "#how-it-works"],
+      ["Partner with us", "#collaborate"],
       ["Blog", "#blog"],
       ["About", "#about"],
     ],
@@ -214,6 +239,29 @@ export const content = {
       ["02", "We shape the experience", "We choose the format and adjust every detail."],
       ["03", "We bring the laboratory", "We set up, facilitate and leave curiosity at work."],
     ],
+    collaborateEyebrow: "Partner with Boom! Lab",
+    collaborateTitle: "Let’s help more children meet science.",
+    collaborateIntro:
+      "We are looking for brands, foundations and institutions ready to turn their support into accessible, memorable science experiences with an educational purpose.",
+    collaborateBenefits: [
+      {
+        icon: "✦",
+        title: "Sponsor an experience",
+        body: "Fund workshops, science days or materials for a community, school or territory you want to support.",
+      },
+      {
+        icon: "◎",
+        title: "Connect with purpose",
+        body: "Connect your brand with active learning, curiosity and meaningful opportunities for children.",
+      },
+      {
+        icon: "↗",
+        title: "Receive clear outcomes",
+        body: "We build a tailored proposal with reach, activity documentation and a wrap-up suited to the partnership.",
+      },
+    ],
+    collaborateCta: "Propose a partnership",
+    collaborateNote: "Every partnership is shaped around its goal, community and project scope.",
     blogEyebrow: "Ideas for further discovery",
     blogTitle: "Science that continues after the workshop.",
     blogIntro:

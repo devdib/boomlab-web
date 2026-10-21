@@ -23,7 +23,7 @@ const copy = {
       message: "Cuéntanos el contexto",
       consent: "Acepto que Boom! Lab use estos datos para responder esta solicitud.",
     },
-    options: ["Taller para colegio", "Cumpleaños científico", "Jornada STEM", "Laboratorio móvil", "Compra de kits", "Alianza institucional", "Otro"],
+    options: ["Taller para colegio", "Cumpleaños científico", "Jornada STEM", "Laboratorio móvil", "Compra de kits", "Auspicio o colaboración", "Otro"],
     placeholders: {
       name: "Ej.: Colegio Horizonte o Ana Pérez",
       phone: "+56 9…",
@@ -56,7 +56,7 @@ const copy = {
       message: "Tell us about the context",
       consent: "I agree that Boom! Lab may use these details to answer this request.",
     },
-    options: ["School workshop", "Science birthday", "STEM day", "Mobile laboratory", "Science kits", "Institutional partnership", "Other"],
+    options: ["School workshop", "Science birthday", "STEM day", "Mobile laboratory", "Science kits", "Sponsorship or partnership", "Other"],
     placeholders: {
       name: "E.g. Horizon School or Ana Pérez",
       phone: "+56 9…",
